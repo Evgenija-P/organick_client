@@ -1,0 +1,17 @@
+import { Roboto, Open_Sans, Yellowtail } from "next/font/google";
+
+const roboto = Roboto({
+  weight: ["300", "400", "500", "700", "900"],
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const openSans = Open_Sans({
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const yellowtail = Yellowtail({ weight: "400", subsets: ["latin"] });
+
+export { roboto, openSans, yellowtail };
