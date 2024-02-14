@@ -1,6 +1,6 @@
 import { Wrapper } from "../Wrapper";
-import banner_1 from "@/images/banner_1.png";
-import banner_2 from "@/images/banner_2.png";
+import banner_1 from "@/images/home/banner_1.png";
+import banner_2 from "@/images/home/banner_2.png";
 import Banner from "../Banner";
 
 const ITEMS = [
