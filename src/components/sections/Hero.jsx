@@ -1,6 +1,6 @@
 import HeroParallax from "../HeroParallax";
 import Title from "../Title";
-import { Wrapper } from "../Wrapper";
+import Wrapper from "../Wrapper";
 
 const Hero = () => {
   return (

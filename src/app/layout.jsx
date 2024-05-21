@@ -3,8 +3,8 @@ import "./globals.css";
 import { Header } from "@/components/Header.jsx";
 
 export const metadata = {
-  title: "Organick",
-  description: "Organick",
+  title: "Organic",
+  description: "Organic",
 };
 
 export default function RootLayout({ children }) {

@@ -100,3 +100,17 @@ ol {
 ::-webkit-scrollbar-thumb:hover {
   background: #7eb693; /* Колір скроллбару при наведенні */
 }
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+}
+
+.shop-link:hover .arrow-icon {
+  animation: pulse 0.8s infinite;
+}

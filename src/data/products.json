@@ -1,0 +1,101 @@
+[
+  {
+    "id": "1",
+    "section": "Vegetable",
+    "title": "Broccoli",
+    "img": "/images/products/broccoli.jpg",
+    "old_price": "25.00",
+    "current_price": "18.00",
+    "stars": 2
+  },
+  {
+    "id": "2",
+    "section": "Fresh",
+    "title": "Tomato",
+    "img": "/images/products/tomato.jpg",
+    "old_price": "10.00",
+    "current_price": "8.00",
+    "stars": 5
+  },
+  {
+    "id": "3",
+    "section": "Health",
+    "title": "Potato",
+    "img": "/images/products/potato.jpg",
+    "old_price": "7.50",
+    "current_price": "5.00",
+    "stars": 4
+  },
+  {
+    "id": "4",
+    "section": "Vegetable",
+    "title": "Corn",
+    "img": "/images/products/corn.jpg",
+    "old_price": "3.25",
+    "current_price": "2.75",
+    "stars": 3
+  },
+  {
+    "id": "5",
+    "section": "Nuts",
+    "title": "Hazelnut",
+    "img": "/images/products/hazelnut.jpg",
+    "old_price": "15.00",
+    "current_price": "13.00",
+    "stars": 4
+  },
+  {
+    "id": "6",
+    "section": "Fresh",
+    "title": "Banana",
+    "img": "/images/products/banana.jpg",
+    "old_price": "12.00",
+    "current_price": "11.50",
+    "stars": 1
+  },
+  {
+    "id": "7",
+    "section": "Health",
+    "title": "Avocado",
+    "img": "/images/products/avocado.jpg",
+    "old_price": "8.00",
+    "current_price": "6.00",
+    "stars": 5
+  },
+  {
+    "id": "8",
+    "section": "Fresh",
+    "title": "Watermelon",
+    "img": "/images/products/watermelon.jpg",
+    "old_price": "9.35",
+    "current_price": "8.15",
+    "stars": 4
+  },
+  {
+    "id": "9",
+    "section": "Vegetable",
+    "title": "Carrot",
+    "img": "/images/products/carrot.jpg",
+    "old_price": "6.35",
+    "current_price": "5.00",
+    "stars": 2
+  },
+  {
+    "id": "10",
+    "section": "Fresh",
+    "title": "Eggplant",
+    "img": "/images/products/eggplant.jpg",
+    "old_price": "5.50",
+    "current_price": "4.15",
+    "stars": 3
+  },
+  {
+    "id": "11",
+    "section": "Health",
+    "title": "Pepper",
+    "img": "/images/products/pepper.jpg",
+    "old_price": "9.85",
+    "current_price": "6.00",
+    "stars": 5
+  }
+]

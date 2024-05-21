@@ -1,5 +1,5 @@
 {
-  "name": "organick",
+  "name": "organic",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -16,7 +16,8 @@
     "react-countup": "^6.5.0",
     "react-dom": "^18",
     "react-just-parallax": "^3.1.16",
-    "react-loader-spinner": "^6.1.6"
+    "react-loader-spinner": "^6.1.6",
+    "sharp": "^0.33.4"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",

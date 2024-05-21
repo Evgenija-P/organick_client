@@ -19,7 +19,7 @@ const ITEMS = [
 const HeroParallax = () => {
   return (
     <div className="absolute top-0 left-0 w-full h-full">
-      {ITEMS.map((el) => (
+      {ITEMS.map(el => (
         <MouseParallax
           enableOnTouchDevice
           isAbsolutelyPositioned
