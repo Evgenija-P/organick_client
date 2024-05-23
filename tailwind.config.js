@@ -23,6 +23,7 @@ module.exports = {
       backgroundImage: {
         hero: "url('../images/hero.png')",
         about: "url('../images/home/about.png')",
+        review: "url('../images/home/reviews.png')",
       },
       boxShadow: {
         btnMain: "4px 4px 5px 2px rgba(212,212,212)",

@@ -12,7 +12,6 @@ const ProductItem = ({ item }) => {
         src={img}
         className=""
         alt={`picture that shows the product ${title}`}
-        layout="responsive"
         width={315}
         height={300}
       />

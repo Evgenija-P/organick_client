@@ -28,7 +28,7 @@ const OurProducts = () => {
           See More
           <Image src={Arrow} className="arrow-icon" alt="pointer icon, right arrow" />
         </Link> */}
-        <LinkButton title="See More" goTo="/shop" />
+        <LinkButton title="See More" goTo="/shop" className="mx-auto mt-[122px]" />
       </Wrapper>
     </section>
   );
