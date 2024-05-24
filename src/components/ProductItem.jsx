@@ -1,10 +1,19 @@
 import Image from "next/image";
 import Stars from "./UI/Stars";
 
-const ProductItem = ({ item }) => {
+const ProductItemsStyle = {
+  products: "shadow-item hover:shadow-itemHover",
+  offer: "hover:shadow-item",
+};
+
+const ProductItem = ({ item, page }) => {
   const { section, title, img, old_price, current_price, stars } = item;
+  const currentStyle = `${ProductItemsStyle[page]}`;
+
   return (
-    <article className="w-[335px] h-[483px] flex flex-col rounded-[30px] bg-white overflow-hidden pb-[17px] relative border border-borderColor justify-end shadow-item hover:shadow-itemHover">
+    <article
+      className={`w-[335px] h-[483px] flex flex-col rounded-[30px] bg-white overflow-hidden pb-[17px] relative border border-borderColor justify-end ${currentStyle}`}
+    >
       <p className="w-fit h-8 px-3 py-2.5 flex items-center justify-center bg-main text-white text-[15px] font-semibold rounded-lg absolute top-[30px] left-[30px]">
         {section}
       </p>

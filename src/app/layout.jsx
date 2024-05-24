@@ -1,3 +1,4 @@
+import Footer from "@/components/sections/Footer";
 import { roboto } from "./fonts";
 import "./globals.css";
 import { Header } from "@/components/Header.jsx";
@@ -12,6 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${roboto.className} text-main bg-white`}>
         <Header /> {children}
+        <Footer />
       </body>
     </html>
   );

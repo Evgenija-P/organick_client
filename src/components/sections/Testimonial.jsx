@@ -1,7 +1,15 @@
+import CircleNumbers from "../CircleNumbers";
 import Subtitle from "../Subtitle";
 import TestimonialItem from "../TestimonialItem";
 import Title from "../Title";
 import Wrapper from "../Wrapper";
+
+const ITEMS = [
+  { text: "Organic", value: "100", type: "percent" },
+  { text: "Active Product", value: "285", type: "plus" },
+  { text: "Organic Orchards", value: "350", type: "plus" },
+  { text: "Years of Farming", value: "25", type: "plus" },
+];
 
 const Testimonial = () => {
   return (
@@ -14,7 +22,12 @@ const Testimonial = () => {
         <div className="w-full mt-[60px] mx-auto">
           <TestimonialItem />
         </div>
-        <div className="w-[80%] h-[1px] bg-[#E0E0E0] mt-[102px] mx-auto" />
+        <div className="w-[80%] h-[1px] bg-[#E0E0E0] my-[102px] mx-auto" />
+        <div className="w-full flex justify-around items-center mx-auto">
+          {ITEMS.map(({ text, value, type }) => (
+            <CircleNumbers text={text} value={value} key={value} type={type} />
+          ))}
+        </div>
       </Wrapper>
     </section>
   );

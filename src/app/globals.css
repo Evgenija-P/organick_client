@@ -80,6 +80,12 @@ ol {
   background-position: top -35px right 90px;
 }
 
+.about {
+  background-image: url(../images/about/hero_about.png);
+  background-color: #f9f8f8;
+  background-repeat: no-repeat;
+}
+
 /* Стилізація скроллбару */
 ::-webkit-scrollbar {
   width: 12px; /* Ширина скроллбару */
@@ -113,4 +119,12 @@ ol {
 
 .shop-link:hover .arrow-icon {
   animation: pulse 0.8s infinite;
+}
+
+.soc-icons {
+  fill: #274c5b;
+}
+
+.soc-link:hover .soc-icons {
+  fill: #eff6f1;
 }

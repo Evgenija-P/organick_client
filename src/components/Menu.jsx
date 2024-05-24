@@ -10,10 +10,10 @@ const MENU_ITEMS = [
   { id: "5", name: "Other", link: "/other", aria: "link to other page", icon: "" },
 ];
 
-export const Menu = () => {
+const Menu = ({ styles }) => {
   return (
-    <nav className="w-[564px] flex justify-between text-xl">
-      {MENU_ITEMS.map((el) => (
+    <nav className={`w-[564px] flex justify-between text-xl ${styles || ""}`}>
+      {MENU_ITEMS.map(el => (
         <Link href={el.link} key={el.id + el.name}>
           {el.name}
         </Link>
@@ -21,3 +21,5 @@ export const Menu = () => {
     </nav>
   );
 };
+
+export default Menu;
