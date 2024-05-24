@@ -84,6 +84,8 @@ ol {
   background-image: url(../images/about/hero_about.png);
   background-color: #f9f8f8;
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 /* Стилізація скроллбару */
@@ -127,4 +129,10 @@ ol {
 
 .soc-link:hover .soc-icons {
   fill: #eff6f1;
+}
+
+.about-hero_section {
+  background-image: url(../images/about/about_about.png);
+  background-repeat: no-repeat;
+  background-position: top 163px left 5%;
 }

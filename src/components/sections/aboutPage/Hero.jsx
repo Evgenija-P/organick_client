@@ -7,11 +7,11 @@ import hero_4 from "@/images/hero_6.png";
 import hero_5 from "@/images/hero_7.png";
 
 const ITEMS = [
-  { id: "1", url: hero_1, style: "absolute bottom-[-145px] left-[310px]", alt: "" },
-  { id: "2", url: hero_2, style: "absolute top-[-15px] left-[590px]", alt: "" },
+  { id: "1", url: hero_1, style: "absolute bottom-[-145px] left-[330px]", alt: "" },
+  { id: "2", url: hero_2, style: "absolute top-[5px] left-[680px]", alt: "" },
   { id: "3", url: hero_3, style: "absolute top-[-25px] left-[57%] rotate-[85deg]", alt: "" },
   { id: "4", url: hero_4, style: "absolute bottom-[30px] right-[60%]", alt: "" },
-  { id: "5", url: hero_5, style: "absolute bottom-0 right-[50%]", alt: "" },
+  { id: "5", url: hero_5, style: "absolute bottom-10 right-[45%]", alt: "" },
 ];
 
 const Hero = () => {

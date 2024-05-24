@@ -35,6 +35,7 @@ module.exports = {
       },
       dropShadow: {
         news: "0 20px 35px rgba(167,167,167,0.25)",
+        team: "0 29px 44px rgba(150,150,150,0.25)",
       },
     },
   },
