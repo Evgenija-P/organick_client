@@ -1,11 +1,20 @@
+"use client";
+
+import React, { useState } from "react";
 import ProductItem from "../ProductItem";
 import Title from "../Title";
 import Subtitle from "../Subtitle";
 import Wrapper from "../Wrapper";
 import products from "@/data/products.json";
-import LinkButton from "../UI/LinkButton";
+import Button from "../UI/Buttons";
 
 const OurProducts = () => {
+  const [visibleProducts, setVisibleProducts] = useState(4);
+
+  const showMoreProducts = () => {
+    setVisibleProducts(prevVisibleProducts => prevVisibleProducts + 4);
+  };
+
   return (
     <section className="w-full min-h-[1067px] pt-[176px] pb-[200px] relative">
       <Wrapper styles={""}>
@@ -14,11 +23,15 @@ const OurProducts = () => {
           <Subtitle>Our Products</Subtitle>
         </div>
         <div className="grid grid-cols-4 gap-y-5">
-          {products.map(el => (
+          {products.slice(0, visibleProducts).map(el => (
             <ProductItem key={el.id} item={el} page="products" />
           ))}
         </div>
-        <LinkButton title="See More" goTo="/shop" style="main" className="mx-auto mt-[122px]" />
+        {visibleProducts < products.length && (
+          <Button clickFn={showMoreProducts} style="main" btnClass="mx-auto mt-[122px]">
+            See More
+          </Button>
+        )}
       </Wrapper>
     </section>
   );

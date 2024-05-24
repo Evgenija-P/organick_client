@@ -34,7 +34,7 @@ a {
 }
 
 button {
-  display: inline-block;
+  display: block;
   box-sizing: border-box;
 
   padding: 0;
@@ -82,6 +82,22 @@ ol {
 
 .about {
   background-image: url(../images/about/hero_about.png);
+  background-color: #f9f8f8;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.shop {
+  background-image: url(../images/shop/hero_shop.png);
+  background-color: #f9f8f8;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.shop-details {
+  background-image: url(../images/shop/hero_shop_single.png);
   background-color: #f9f8f8;
   background-repeat: no-repeat;
   background-position: center;
