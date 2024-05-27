@@ -7,9 +7,9 @@ const ITEMS = [
   { name: "Pinterest", link: "#", icon: <Pinterest /> },
 ];
 
-const SocIconList = () => {
+const SocIconList = ({ page }) => {
   return (
-    <div className="flex gap-x-4 w-fit mx-auto">
+    <div className={`flex gap-x-4 ${page !== "home" ? "w-full mr-auto" : "w-fit mx-auto"} `}>
       {ITEMS.map(el => (
         <a
           key={el.name}

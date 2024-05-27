@@ -19,7 +19,7 @@ export default function Home() {
       <Testimonial />
       <Offer />
       <Friendly />
-      <News />
+      <News page={"home"}/>
       <Subscribe />
     </main>
   );

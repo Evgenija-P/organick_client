@@ -8,7 +8,7 @@ const MENU_ITEMS = [
   { id: "4", name: "Team", link: "/team", aria: "link to team page" },
   { id: "5", name: "News", link: "/news", aria: "link to news page" },
   { id: "6", name: "Contacts", link: "/contacts", aria: "link to contacts page" },
-  { id: "7", name: "Other", link: "/other", aria: "link to other page", icon: "" },
+  { id: "7", name: "Services", link: "/services", aria: "link to services page", icon: "" },
 ];
 
 const Menu = ({ styles }) => {

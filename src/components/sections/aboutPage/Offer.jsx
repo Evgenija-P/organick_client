@@ -16,7 +16,7 @@ const ITEMS = [
 
 const Offer = () => {
   return (
-    <section className="w-full min-h-[1050px] py-[200px] bg-main relative">
+    <section className="w-full py-[200px] bg-main relative">
       <Wrapper styles={""}>
         <div className="w-[852px] flex flex-col mb-11 mx-auto">
           <Title style={"mb-2 text-center"}>Offer</Title>

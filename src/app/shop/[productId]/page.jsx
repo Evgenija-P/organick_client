@@ -1,13 +1,23 @@
+import HeroOtherPage from "@/components/sections/HeroOtherPages";
 import Subscribe from "@/components/sections/Subscribe";
-import HeroDetails from "@/components/sections/shopPage/HeroDetails";
+
+import hero_8 from "@/images/hero_8.png";
+import hero_3 from "@/images/hero_3.png";
+import hero_6 from "@/images/hero_6.png";
+import hero_7 from "@/images/hero_7.png";
+
+const ITEMS = [
+  { id: "4", url: hero_7, style: "absolute bottom-10 left-[40%]", alt: "" },
+  { id: "1", url: hero_6, style: "absolute top-[10px] left-[700px]", alt: "" },
+  { id: "2", url: hero_8, style: "absolute top-[-45px] right-[520px]", alt: "" },
+  { id: "3", url: hero_3, style: "absolute bottom-[65px] right-[27%] rotate-[1deg]", alt: "" },
+];
 
 export default function ProductId({ params }) {
   return (
     <main className="w-full">
-      <HeroDetails name={params.productId} />
+      <HeroOtherPage title={params.productId} items={ITEMS} className={"shop-details"} />
       <Subscribe />
     </main>
   );
 }
-
-/* <h1>Hello, {params.productId} Page!</h1>; */
