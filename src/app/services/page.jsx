@@ -4,6 +4,7 @@ import hero_12 from "@/images/hero_12.png";
 import hero_18 from "@/images/hero_18.png";
 import hero_16 from "@/images/hero_16.png";
 import HeroServices from "@/components/sections/services/HeroServices";
+import VideoSections from "@/components/VideoSections";
 
 const ITEMS = [
   { id: "1", url: hero_17, style: "absolute bottom-[25%] left-[35%]", alt: "" },
@@ -22,6 +23,7 @@ export default function Page() {
     <main className="w-full">
       <HeroOtherPage title={"Services"} items={ITEMS} className={"services"} />
       <HeroServices />
+      <VideoSections />
     </main>
   );
 }

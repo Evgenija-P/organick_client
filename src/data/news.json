@@ -6,7 +6,7 @@
     "author": "Rachi Card",
     "date": "18.05.2024",
     "subtitle": "Simply dummy text of the printing and typesetting industry. Lorem Ipsum",
-    "link": "#"
+    "link": "1"
   },
   {
     "id": "news2",
@@ -15,7 +15,7 @@
     "author": "Rachi Card",
     "date": "23.04.2024",
     "subtitle": "Simply dummy text of the printing and typesetting industry. Lorem Ipsum",
-    "link": "#"
+    "link": "2"
   },
   {
     "id": "news3",
@@ -24,7 +24,7 @@
     "author": "Rachi Card",
     "date": "19.03.2024",
     "subtitle": "Simply dummy text of the printing and typesetting industry. Lorem Ipsum",
-    "link": "#"
+    "link": "3"
   },
   {
     "id": "news4",
@@ -33,7 +33,7 @@
     "author": "Rachi Card",
     "date": "10.02.2024",
     "subtitle": "Simply dummy text of the printing and typesetting industry. Lorem Ipsum",
-    "link": "#"
+    "link": "4"
   },
   {
     "id": "news5",
@@ -42,7 +42,7 @@
     "author": "Rachi Card",
     "date": "15.01.2024",
     "subtitle": "Simply dummy text of the printing and typesetting industry. Lorem Ipsum",
-    "link": "#"
+    "link": "5"
   },
   {
     "id": "news6",
@@ -51,6 +51,6 @@
     "author": "Rachi Card",
     "date": "18.12.2023",
     "subtitle": "Simply dummy text of the printing and typesetting industry. Lorem Ipsum",
-    "link": "#"
+    "link": "6"
   }
 ]

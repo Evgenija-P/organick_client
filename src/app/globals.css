@@ -75,7 +75,8 @@ ol {
 .team,
 .news,
 .contacts,
-.services {
+.services,
+.quality {
   background-color: #f9f8f8;
   background-repeat: no-repeat;
   background-position: center;
@@ -121,6 +122,10 @@ ol {
   background-image: url(/images/services/hero.png);
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.quality {
+  background-image: url(/images/quality/hero_quality.png);
 }
 
 /* Стилізація скроллбару */
@@ -176,6 +181,14 @@ ol {
   stroke: #274c5b;
 }
 
+.play {
+  fill: white;
+}
+
 button:hover .cross {
   stroke: #7eb693;
+}
+
+button:hover .play {
+  fill: #7eb693;
 }

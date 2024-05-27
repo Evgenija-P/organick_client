@@ -1,3 +1,6 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import React from "react";
 
@@ -7,15 +10,23 @@ const MENU_ITEMS = [
   { id: "3", name: "Shop", link: "/shop", aria: "link to shop page" },
   { id: "4", name: "Team", link: "/team", aria: "link to team page" },
   { id: "5", name: "News", link: "/news", aria: "link to news page" },
-  { id: "6", name: "Contacts", link: "/contacts", aria: "link to contacts page" },
-  { id: "7", name: "Services", link: "/services", aria: "link to services page", icon: "" },
+  { id: "6", name: "Services", link: "/services", aria: "link to services page", icon: "" },
+  { id: "7", name: "Contacts", link: "/contacts", aria: "link to contacts page" },
 ];
 
 const Menu = ({ styles }) => {
+  const pathname = usePathname();
+
   return (
     <nav className={`w-[564px] flex justify-between text-xl ${styles || ""}`}>
       {MENU_ITEMS.map(el => (
-        <Link href={el.link} key={el.id + el.name}>
+        <Link
+          href={el.link}
+          key={el.id + el.name}
+          className={`${
+            pathname === el.link && "text-green"
+          } hover:text-green hover:underline hover:underline-offset-1`}
+        >
           {el.name}
         </Link>
       ))}

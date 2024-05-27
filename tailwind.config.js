@@ -28,6 +28,7 @@ module.exports = {
         subscribe: "url('/images/subscribe.png')",
         notFound: "url('/images/notFound/bg_not_found.png')",
         contactLocation: "url('/images/contact/location.png')",
+        videoSection: "url('/images/services/video-section.png')",
       },
       boxShadow: {
         btnMain: "0px 0px 16px 0px rgba(39,76,91,1)",
@@ -40,6 +41,7 @@ module.exports = {
         news: "0 20px 35px rgba(167,167,167,0.25)",
         team: "0 29px 44px rgba(150,150,150,0.25)",
         contactItem: "0 4px 4px rgba(0,0,0,0.25)",
+        newsTitle: "0 14px 36px rgba(204,204,204,0.25)",
       },
     },
   },

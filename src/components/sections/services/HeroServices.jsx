@@ -39,7 +39,7 @@ const HeroServices = () => {
 
         <LinkButton
           title="Explore More"
-          goTo="/"
+          goTo="/services/standard"
           style="transparent"
           className="w-[220px] mx-auto"
         />

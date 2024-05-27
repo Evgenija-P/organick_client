@@ -27,7 +27,12 @@ const NewsItem = ({ item }) => {
         </p>
         <p className="text-[25px] font-extrabold">{title}</p>
         <p className="text-lg mb-4">{subtitle}</p>
-        <LinkButton title="Read More" goTo={link} style="yellow" className="w-fit px-12" />
+        <LinkButton
+          title="Read More"
+          goTo={`/news/${link}`}
+          style="yellow"
+          className="w-fit px-12"
+        />
       </div>
     </article>
   );
