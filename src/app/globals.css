@@ -74,7 +74,8 @@ ol {
 .shop-details,
 .team,
 .news,
-.contacts {
+.contacts,
+.services {
   background-color: #f9f8f8;
   background-repeat: no-repeat;
   background-position: center;
@@ -110,6 +111,16 @@ ol {
 
 .contacts {
   background-image: url(/images/contact/hero_contact.png);
+}
+
+.services {
+  background-image: url(/images/services/services.png);
+}
+
+.services-section {
+  background-image: url(/images/services/hero.png);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* Стилізація скроллбару */
@@ -159,4 +170,12 @@ ol {
   background-image: url(/images/about/about_about.png);
   background-repeat: no-repeat;
   background-position: top 163px left 5%;
+}
+
+.cross {
+  stroke: #274c5b;
+}
+
+button:hover .cross {
+  stroke: #7eb693;
 }

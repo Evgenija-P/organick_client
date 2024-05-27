@@ -27,6 +27,7 @@ module.exports = {
         friendly: "url('/images/home/whoWe.png')",
         subscribe: "url('/images/subscribe.png')",
         notFound: "url('/images/notFound/bg_not_found.png')",
+        contactLocation: "url('/images/contact/location.png')",
       },
       boxShadow: {
         btnMain: "0px 0px 16px 0px rgba(39,76,91,1)",
