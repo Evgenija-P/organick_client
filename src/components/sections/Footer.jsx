@@ -16,20 +16,29 @@ const Footer = () => {
           <ul>
             <li className="mb-2">
               <p className="text-lg font-bold">Email:</p>
-              <a href={`mailto^${emailAddress}`} className="text-lg">
+              <a
+                href={`mailto^${emailAddress}`}
+                className="text-lg hover:text-green hover:underline hover:underline-offset-1"
+              >
                 {emailAddress}
               </a>
             </li>
             <li className="mb-2">
               <p className="text-lg font-bold">Phone:</p>
-              <a href={`tel:${phoneNumber}`} className="text-lg">
+              <a
+                href={`tel:${phoneNumber}`}
+                className="text-lg hover:text-green hover:underline hover:underline-offset-1"
+              >
                 {formattedPhoneNumber}
               </a>
             </li>
             <li>
               <address className="not-italic">
                 <p className="text-lg font-bold">Address</p>
-                <a href="https://maps.app.goo.gl/1Lg4QtkJPxStSHMj8" className="text-lg">
+                <a
+                  href="https://maps.app.goo.gl/1Lg4QtkJPxStSHMj8"
+                  className="text-lg hover:text-green hover:underline hover:underline-offset-1"
+                >
                   Peremohy street, 20, Zabiria, Kiev region, 08145
                 </a>
               </address>

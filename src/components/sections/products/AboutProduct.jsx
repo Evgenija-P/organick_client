@@ -27,7 +27,7 @@ const AboutProduct = ({ item }) => {
                 the industry's standard dummy text ever since the 1500s, when an unknown printer
                 took a galley.
               </p>
-              <Quantity id={id} />
+              <Quantity item={item} />
             </div>
           </div>
           <AdditionalInfo about={1} details={1} />

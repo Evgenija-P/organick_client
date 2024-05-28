@@ -1,13 +1,19 @@
+"use client";
+
+import { observer } from "mobx-react-lite";
 import Link from "next/link";
 import Menu from "./Menu";
 import Logo from "./UI/Logo";
 import { Cart } from "@/icons/iconComponent";
+import { useStore } from "@/store/StoreProvider";
 
-export const Header = () => {
+export const Header = observer(() => {
+  const { cartStore } = useStore();
+
   return (
     <header className="flex justify-between items-center font-bold w-[1480px] px-[40px] py-[50px] mx-auto">
       <Logo />
-      <Menu />
+      <Menu section="header" />
       <div className="flex gap-x-8 items-center">
         <div>search form</div>
         <Link
@@ -17,9 +23,9 @@ export const Header = () => {
           <div className="w-[56px] h-[56px] rounded-full bg-main flex items-center justify-center cart-wrapper">
             <Cart />
           </div>
-          Кошик 0
+          Кошик {cartStore.totalQuantity}
         </Link>
       </div>
     </header>
   );
-};
+});

@@ -14,7 +14,7 @@ const MENU_ITEMS = [
   { id: "7", name: "Контакти", link: "/contacts", aria: "link to contacts page" },
 ];
 
-const Menu = ({ styles }) => {
+const Menu = ({ styles, section }) => {
   const pathname = usePathname();
 
   return (
@@ -24,7 +24,7 @@ const Menu = ({ styles }) => {
           href={el.link}
           key={el.id + el.name}
           className={`${
-            pathname === el.link && "text-green"
+            pathname === el.link && section === "header" && "text-green"
           } hover:text-green hover:underline hover:underline-offset-1`}
         >
           {el.name}

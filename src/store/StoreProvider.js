@@ -1,9 +1,9 @@
 "use client"; // це важливо для клієнтського компонента
 
 import { createContext, useContext } from "react";
-import productsStore from "../stores/productsStore";
-import newsStore from "../stores/newsStore";
-import cartStore from "../stores/cartStore";
+import productsStore from "./productsStore";
+import newsStore from "./newsStore";
+import cartStore from "./cartStore";
 
 const StoreContext = createContext({
   productsStore,

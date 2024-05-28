@@ -7,6 +7,9 @@ import { StoreProvider } from "@/store/StoreProvider";
 export const metadata = {
   title: "Organic",
   description: "Organic",
+  icons: {
+    icon: "/public/favicon.ico",
+  },
 };
 
 export default function RootLayout({ children }) {

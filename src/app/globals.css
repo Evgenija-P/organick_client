@@ -4,12 +4,11 @@
 
 html {
   scroll-behavior: smooth;
-  /* font-family: "Noto Sans", sans-serif; */
 }
 
-/* body {
-  font-family: "Noto Sans", sans-serif;
-} */
+input {
+  cursor: text;
+}
 
 p,
 h1,

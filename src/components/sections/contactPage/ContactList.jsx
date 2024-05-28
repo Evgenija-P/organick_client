@@ -30,7 +30,7 @@ const ContactList = () => {
               a galley.
             </p>
             <Contacts />
-            <SocIconList />
+            <SocIconList page={"contacts"} />
           </div>
         </div>
         <LocationsList />

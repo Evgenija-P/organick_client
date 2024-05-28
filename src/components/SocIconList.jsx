@@ -9,7 +9,11 @@ const ITEMS = [
 
 const SocIconList = ({ page }) => {
   return (
-    <div className={`flex gap-x-4 ${page !== "home" ? "w-full mr-auto" : "w-fit mx-auto"} `}>
+    <div
+      className={`flex gap-x-4 ${
+        page === "contacts" ? "w-full mr-auto" : "w-full mx-auto justify-between"
+      } `}
+    >
       {ITEMS.map(el => (
         <a
           key={el.name}
