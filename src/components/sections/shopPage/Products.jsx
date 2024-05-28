@@ -1,9 +1,10 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import ProductItem from "../../ProductItem";
+
 import Wrapper from "../../Wrapper";
 import products from "@/data/products.json";
+import ProductItem from "../products/ProductItem";
 
 const Products = () => {
   const [loadedProducts, setLoadedProducts] = useState(4);

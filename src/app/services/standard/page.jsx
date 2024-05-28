@@ -2,7 +2,7 @@ import QualityItem from "@/components/QualityItem";
 import Wrapper from "@/components/Wrapper";
 import Subscribe from "@/components/sections/Subscribe";
 
-export default function Page() {
+export default function StandardPage() {
   return (
     <main className="w-full">
       <section className={`w-full h-[450px] relative overflow-hidden quality`}>

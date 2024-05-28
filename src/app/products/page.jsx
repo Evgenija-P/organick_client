@@ -14,10 +14,10 @@ const ITEMS = [
   { id: "4", url: hero_7, style: "absolute bottom-10 right-[35%]", alt: "" },
 ];
 
-export default function Page() {
+export default function ShopPage() {
   return (
     <main className="w-full">
-      <HeroOtherPage items={ITEMS} title={"Shop"} className={"shop"}/>
+      <HeroOtherPage items={ITEMS} title={"Shop"} className={"shop"} />
       <Products />
       <Subscribe />
     </main>

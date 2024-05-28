@@ -3,7 +3,7 @@ import Wrapper from "../Wrapper";
 import Subtitle from "../Subtitle";
 import LinkButton from "../UI/LinkButton";
 import products from "@/data/products.json";
-import ProductItem from "../ProductItem";
+import ProductItem from "./products/ProductItem";
 
 const Offer = () => {
   const limitedProducts = products.slice(0, 4);
@@ -15,7 +15,7 @@ const Offer = () => {
             <Title style={"mb-2"}>Offer</Title>
             <Subtitle className={"text-white"}>We Offer Organic For You</Subtitle>
           </div>
-          <LinkButton title="View All Product" goTo="/shop" style="yellow" className="px-10" />
+          <LinkButton title="View All Product" goTo="/products" style="yellow" className="px-10" />
         </div>
 
         <div className="w-full mx-auto grid grid-cols-4 mt-[50px]">

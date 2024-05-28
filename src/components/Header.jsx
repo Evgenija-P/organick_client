@@ -1,14 +1,24 @@
+import Link from "next/link";
 import Menu from "./Menu";
 import Logo from "./UI/Logo";
+import { Cart } from "@/icons/iconComponent";
 
 export const Header = () => {
   return (
     <header className="flex justify-between items-center font-bold w-[1480px] px-[40px] py-[50px] mx-auto">
       <Logo />
       <Menu />
-      <div className="flex gap-x-8">
+      <div className="flex gap-x-8 items-center">
         <div>search form</div>
-        <div>cart</div>
+        <Link
+          href="/cart"
+          className="w-[159px] h-[66px] rounded-[33px] border border-[#E0E0E0] p-[5px] flex items-center gap-x-2 hover:bg-main hover:text-white"
+        >
+          <div className="w-[56px] h-[56px] rounded-full bg-main flex items-center justify-center cart-wrapper">
+            <Cart />
+          </div>
+          Кошик 0
+        </Link>
       </div>
     </header>
   );

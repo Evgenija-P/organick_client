@@ -43,6 +43,10 @@ module.exports = {
         contactItem: "0 4px 4px rgba(0,0,0,0.25)",
         newsTitle: "0 14px 36px rgba(204,204,204,0.25)",
       },
+      gridTemplateColumns: {
+        cart: "800px 400px",
+        cartItem: "250px 65px 90px 70px 35px",
+      },
     },
   },
   plugins: [],

@@ -1,8 +1,8 @@
 "use client";
 
 import { useForm } from "react-hook-form";
-import TextField from "./UI/form/TextField";
-import Button from "./UI/Buttons";
+import TextField from "../../UI/form/TextField";
+import Button from "../../UI/Buttons";
 
 const TEXT_FIELDS = [
   {

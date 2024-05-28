@@ -185,10 +185,24 @@ ol {
   fill: white;
 }
 
+.cart {
+  /* fill: white; */
+  stroke: white;
+}
+
 button:hover .cross {
   stroke: #7eb693;
 }
 
 button:hover .play {
   fill: #7eb693;
+}
+
+a:hover .cart {
+  /* fill: #274c5b; */
+  stroke: #274c5b;
+}
+
+a:hover .cart-wrapper {
+  background: #fff;
 }

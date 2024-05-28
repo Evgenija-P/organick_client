@@ -1,5 +1,6 @@
+import Stars from "@/components/UI/Stars";
 import Image from "next/image";
-import Stars from "./UI/Stars";
+import Link from "next/link";
 
 const ProductItemsStyle = {
   products: "shadow-item hover:shadow-itemHover",
@@ -7,15 +8,16 @@ const ProductItemsStyle = {
 };
 
 const ProductItem = ({ item, page }) => {
-  const { section, title, img, old_price, current_price, stars } = item;
+  const { category, title, img, old_price, current_price, stars, slug } = item;
   const currentStyle = `${ProductItemsStyle[page]}`;
 
   return (
-    <article
+    <Link
+      href={`/products/${slug}`}
       className={`w-[335px] h-[483px] flex flex-col rounded-[30px] bg-white overflow-hidden pb-[17px] relative border border-borderColor justify-end ${currentStyle}`}
     >
       <p className="w-fit h-8 px-3 py-2.5 flex items-center justify-center bg-main text-white text-[15px] font-semibold rounded-lg absolute top-[30px] left-[30px]">
-        {section}
+        {category}
       </p>
       <Image
         src={img}
@@ -34,19 +36,8 @@ const ProductItem = ({ item, page }) => {
           <Stars active={stars} />
         </li>
       </ul>
-    </article>
+    </Link>
   );
 };
 
 export default ProductItem;
-// Vegetable;
-// Millets;
-// Fresh;
-// Health;
-// Nuts;
-
-// Овощной;
-// Просо;
-// Свежий;
-// Здоровье;
-// Орехи;

@@ -2,7 +2,6 @@ import Subscribe from "@/components/sections/Subscribe";
 import AboutUs from "@/components/sections/aboutPage/AboutUs";
 import Choose from "@/components/sections/aboutPage/Choose";
 import Offer from "@/components/sections/aboutPage/Offer";
-import Teams from "@/components/Teams";
 
 import hero_1 from "@/images/hero_1.png";
 import hero_2 from "@/images/hero_8.png";
@@ -10,6 +9,7 @@ import hero_3 from "@/images/hero_3.png";
 import hero_4 from "@/images/hero_6.png";
 import hero_5 from "@/images/hero_7.png";
 import HeroOtherPage from "@/components/sections/HeroOtherPages";
+import Teams from "@/components/sections/team/Teams";
 
 const ITEMS = [
   { id: "1", url: hero_1, style: "absolute bottom-[-145px] left-[330px]", alt: "" },
@@ -19,7 +19,7 @@ const ITEMS = [
   { id: "5", url: hero_5, style: "absolute bottom-10 right-[45%]", alt: "" },
 ];
 
-export default function Page() {
+export default function AboutPage() {
   return (
     <main className="w-full">
       <HeroOtherPage items={ITEMS} title={"About Us"} className={"about"} />

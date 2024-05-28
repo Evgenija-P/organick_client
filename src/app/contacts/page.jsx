@@ -18,7 +18,7 @@ const ITEMS = [
   { id: "4", url: hero_16, style: "absolute bottom-[15%] right-[35%]", alt: "" },
 ];
 
-export default function Page() {
+export default function ContactsPage() {
   return (
     <main className="w-full">
       <HeroOtherPage title={"Contact Us"} items={ITEMS} className={"contacts"} />

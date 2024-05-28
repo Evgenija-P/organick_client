@@ -1,12 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
-import ProductItem from "../ProductItem";
+
 import Title from "../Title";
 import Subtitle from "../Subtitle";
 import Wrapper from "../Wrapper";
 import products from "@/data/products.json";
 import Button from "../UI/Buttons";
+import ProductItem from "./products/ProductItem";
 
 const OurProducts = () => {
   const [visibleProducts, setVisibleProducts] = useState(4);

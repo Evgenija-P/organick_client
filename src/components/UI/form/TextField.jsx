@@ -1,7 +1,17 @@
 import { Cross } from "@/icons/iconComponent";
 import { useController } from "react-hook-form";
 
-const TextField = ({ control, name, defaultValue, placeholder, onReset, type, style, label }) => {
+const TextField = ({
+  control,
+  name,
+  defaultValue,
+  placeholder,
+  onReset,
+  type,
+  style,
+  label,
+  page,
+}) => {
   // Визначаємо правила, якщо тип не є textarea
   const rules = type !== "textarea" ? { required: "Це поле обов'язкове" } : {};
 
@@ -15,7 +25,7 @@ const TextField = ({ control, name, defaultValue, placeholder, onReset, type, st
   return (
     <div
       className={`${
-        type === "input" || type === "email" ? "w-[569px]" : "w-full"
+        (type === "input" || type === "email") && page !== "cart" ? "w-[569px]" : "w-full"
       } ${style} flex flex-col gap-y-[26px] relative`}
     >
       <label className="text-lg font-semibold">

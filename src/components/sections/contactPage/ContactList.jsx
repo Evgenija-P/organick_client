@@ -2,9 +2,10 @@ import Wrapper from "@/components/Wrapper";
 import Image from "next/image";
 import LocationImage from "@/images/contact/fruits.png";
 import SocIconList from "@/components/SocIconList";
-import LocationsList from "@/components/LocationsList";
-import Contacts from "@/components/Contacts";
-import ContactForm from "@/components/ContactForm";
+import LocationsList from "@/components/sections/contactPage/LocationsList";
+
+import ContactForm from "@/components/sections/contactPage/ContactForm";
+import Contacts from "./Contacts";
 
 const ContactList = () => {
   return (

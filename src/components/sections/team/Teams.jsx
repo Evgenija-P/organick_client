@@ -1,8 +1,8 @@
 import Title from "@/components/Title";
-import Wrapper from "./Wrapper";
+import Wrapper from "../../Wrapper";
 import Subtitle from "@/components/Subtitle";
 import team from "@/data/team.json";
-import TeamItem from "@/components/TeamItem";
+import TeamItem from "@/components/sections/team/TeamItem";
 
 const Teams = ({ page }) => {
   const limited = page === "about" ? team.slice(0, 3) : team;

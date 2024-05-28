@@ -1,6 +1,6 @@
 import { formatDate } from "@/utils/dateFormatting";
 import Image from "next/image";
-import LinkButton from "./UI/LinkButton";
+import LinkButton from "../../UI/LinkButton";
 import authorImage from "@/images/news/author.png";
 
 const NewsItem = ({ item }) => {

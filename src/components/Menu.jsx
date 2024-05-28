@@ -5,13 +5,13 @@ import Link from "next/link";
 import React from "react";
 
 const MENU_ITEMS = [
-  { id: "1", name: "Home", link: "/", aria: "link to Home page" },
-  { id: "2", name: "About", link: "/about", aria: "link to about page" },
-  { id: "3", name: "Shop", link: "/shop", aria: "link to shop page" },
-  { id: "4", name: "Team", link: "/team", aria: "link to team page" },
-  { id: "5", name: "News", link: "/news", aria: "link to news page" },
-  { id: "6", name: "Services", link: "/services", aria: "link to services page", icon: "" },
-  { id: "7", name: "Contacts", link: "/contacts", aria: "link to contacts page" },
+  // { id: "1", name: "Home", link: "/", aria: "link to Home page" },
+  { id: "2", name: "Про нас", link: "/about", aria: "link to about page" },
+  { id: "3", name: "Магазин", link: "/products", aria: "link to shop page" },
+  { id: "4", name: "Команда", link: "/team", aria: "link to team page" },
+  { id: "5", name: "Новини", link: "/news", aria: "link to news page" },
+  { id: "6", name: "Послуги", link: "/services", aria: "link to services page", icon: "" },
+  { id: "7", name: "Контакти", link: "/contacts", aria: "link to contacts page" },
 ];
 
 const Menu = ({ styles }) => {

@@ -2,7 +2,7 @@ import Title from "../Title";
 import Subtitle from "../Subtitle";
 import Wrapper from "../Wrapper";
 import LinkButton from "../UI/LinkButton";
-import NewsItem from "../NewsItem";
+import NewsItem from "./news/NewsItem";
 import news from "@/data/news.json";
 
 const News = ({ page }) => {

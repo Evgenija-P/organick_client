@@ -3,8 +3,8 @@ import hero_8 from "@/images/hero_8.png";
 import hero_9 from "@/images/hero_9.png";
 import hero_10 from "@/images/hero_10.png";
 import hero_11 from "@/images/hero_11.png";
-import Teams from "@/components/Teams";
 import Subscribe from "@/components/sections/Subscribe";
+import Teams from "@/components/sections/team/Teams";
 
 const ITEMS = [
   { id: "1", url: hero_8, style: "absolute top-[-10px] right-[150px]", alt: "" },
@@ -18,7 +18,7 @@ const ITEMS = [
   { id: "4", url: hero_11, style: "absolute top-[85px] right-[480px]", alt: "" },
 ];
 
-export default function Page() {
+export default function TeamPage() {
   return (
     <main className="w-full">
       <HeroOtherPage title={"Our Team"} items={ITEMS} className={"team"} />
