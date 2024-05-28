@@ -1,6 +1,6 @@
-import QualityItem from "@/components/QualityItem";
 import Wrapper from "@/components/Wrapper";
 import Subscribe from "@/components/sections/Subscribe";
+import QualityItem from "@/components/sections/standard/QualityItem";
 
 export default function StandardPage() {
   return (
