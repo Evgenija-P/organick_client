@@ -6,8 +6,11 @@ import { useEffect, useState } from "react";
 const SummaryInfo = observer(({ func, section }) => {
   const { cartStore } = useStore();
 
-  const total = (cartStore.totalPrice * 0.07).toFixed(2);
-  const delivery = parseFloat(total);
+  useEffect(() => {
+    const total = (cartStore.totalPrice * 0.07).toFixed(2);
+    const delivery = parseFloat(total);
+    cartStore.setDeliveryCost(delivery);
+  }, [cartStore.totalPrice, cartStore]);
 
   const [isEmpty, setIsEmpty] = useState(cartStore.errors.length);
 
@@ -20,6 +23,7 @@ const SummaryInfo = observer(({ func, section }) => {
       return;
     }
 
+    cartStore.submitOrder();
     func();
     cartStore.resetErrors();
   };
@@ -47,14 +51,14 @@ const SummaryInfo = observer(({ func, section }) => {
       <li className="w-full flex items-center justify-between mb-12">
         <p>Вартість доставки</p>
         <p>
-          {delivery}
+          {cartStore.deliveryCost.toFixed(2)}
           {" \u20B4"}
         </p>
       </li>
       <li className="w-full flex items-center justify-between mb-16">
         <p>Загальна вартість</p>
         <p>
-          {cartStore.totalPrice + delivery}
+          {cartStore.totalCost.toFixed(2)}
           {" \u20B4"}
         </p>
       </li>

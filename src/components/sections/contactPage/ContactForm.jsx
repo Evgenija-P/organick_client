@@ -3,6 +3,7 @@
 import { useForm } from "react-hook-form";
 import TextField from "../../UI/form/TextField";
 import Button from "../../UI/Buttons";
+import { createFeedback } from "@/api/feedback";
 
 const TEXT_FIELDS = [
   {
@@ -63,6 +64,7 @@ const ContactForm = () => {
 
   const onSubmit = data => {
     console.log(data);
+    createFeedback(data);
     reset();
   };
 

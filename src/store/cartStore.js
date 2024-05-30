@@ -1,6 +1,8 @@
 import { validateFields } from "@/utils/validateFields";
 import { makeAutoObservable, toJS } from "mobx";
 
+import { createOrder } from "@/api/ordersAPI";
+
 class CartStore {
   items = [];
   orderInfo = {
@@ -19,6 +21,8 @@ class CartStore {
   errors = [];
   totalQuantity = 0;
   totalPrice = 0;
+  deliveryCost = 0; // Додаємо поле для зберігання вартості доставки
+  totalCost = 0; // Додаємо поле для зберігання загальної вартості
 
   constructor() {
     makeAutoObservable(this);
@@ -29,14 +33,13 @@ class CartStore {
     if (existingProduct) {
       existingProduct.quantity += 1;
     } else {
-      this.items.push({ ...product });
+      this.items.push({ ...product, quantity: 1 });
     }
     this.updateTotalPrice();
   }
 
   quantityProduct(productId) {
     const existingProduct = this.items.find(item => item.id === productId);
-
     return existingProduct?.quantity;
   }
 
@@ -81,6 +84,7 @@ class CartStore {
       return sum + price * item.quantity;
     }, 0);
     this.updateTotalQuantity();
+    this.updateTotalCost();
   }
 
   setOrderInfo(field, value) {
@@ -105,6 +109,45 @@ class CartStore {
     Object.keys(this.orderInfo).forEach(key => {
       this.orderInfo[key] = "";
     });
+  }
+
+  setDeliveryCost(cost) {
+    this.deliveryCost = cost;
+    this.updateTotalCost();
+  }
+
+  updateTotalCost() {
+    this.totalCost = this.totalPrice + this.deliveryCost;
+  }
+
+  async submitOrder() {
+    this.validateOrderInfo();
+    if (this.errors.length > 0) {
+      return false;
+    }
+
+    const orderData = {
+      ...this.orderInfo,
+      products: this.items.map(item => ({
+        product: item.id,
+        quantity: item.quantity,
+      })),
+      summa: this.totalPrice,
+      delivery_cost: this.deliveryCost,
+      total_cost: this.totalCost,
+    };
+
+    try {
+      const response = createOrder(orderData);
+      console.log("Order submitted successfully:", response.data);
+      this.clearOrderInfo();
+      this.items = [];
+      this.updateTotalPrice();
+      return true;
+    } catch (error) {
+      console.error("Error submitting order:", error);
+      return false;
+    }
   }
 }
 

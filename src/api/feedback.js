@@ -1,25 +1,25 @@
 import { baseURL } from "./configurations";
 
-export const createOrder = async orderData => {
+export const createFeedback = async feedbackData => {
   try {
-    const response = await fetch(`${baseURL}/order`, {
+    const response = await fetch(`${baseURL}/feedback`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(orderData),
+      body: JSON.stringify(feedbackData),
     });
     const data = await response.json();
-    console.log("createOrder", data);
+    console.log("createFeedback", data);
     return data;
   } catch (error) {
     console.error("Error:", error);
   }
 };
 
-export const getAllOrders = async () => {
+export const getAllFeedbacks = async () => {
   try {
-    const response = await fetch(`${baseURL}/order`, {
+    const response = await fetch(`${baseURL}/feedback`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
