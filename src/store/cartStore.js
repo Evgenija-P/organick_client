@@ -1,6 +1,5 @@
 import { validateFields } from "@/utils/validateFields";
-import { makeAutoObservable, toJS } from "mobx";
-
+import { makeAutoObservable, action } from "mobx";
 import { createOrder } from "@/api/ordersAPI";
 
 class CartStore {
@@ -21,11 +20,28 @@ class CartStore {
   errors = [];
   totalQuantity = 0;
   totalPrice = 0;
-  deliveryCost = 0; // Додаємо поле для зберігання вартості доставки
-  totalCost = 0; // Додаємо поле для зберігання загальної вартості
+  deliveryCost = 0;
+  totalCost = 0;
 
   constructor() {
-    makeAutoObservable(this);
+    makeAutoObservable(this, {
+      addToCart: action,
+      removeFromCart: action,
+      increaseQuantity: action,
+      decreaseQuantity: action,
+      updateTotalQuantity: action,
+      updateTotalPrice: action,
+      setOrderInfo: action,
+      resetOrderField: action,
+      resetErrors: action,
+      clearOrderInfo: action,
+      setDeliveryCost: action,
+      updateTotalCost: action,
+      submitOrder: action,
+      loadFromLocalStorage: action,
+      saveToLocalStorage: action,
+    });
+    this.loadFromLocalStorage();
   }
 
   addToCart(product) {
@@ -36,6 +52,7 @@ class CartStore {
       this.items.push({ ...product, quantity: 1 });
     }
     this.updateTotalPrice();
+    this.saveToLocalStorage();
   }
 
   quantityProduct(productId) {
@@ -46,6 +63,7 @@ class CartStore {
   removeFromCart(id) {
     this.items = this.items.filter(item => item.id !== id);
     this.updateTotalPrice();
+    this.saveToLocalStorage();
   }
 
   increaseQuantity(id) {
@@ -53,6 +71,7 @@ class CartStore {
     if (product) {
       product.quantity += 1;
       this.updateTotalPrice();
+      this.saveToLocalStorage();
     }
   }
 
@@ -65,6 +84,7 @@ class CartStore {
         this.removeFromCart(id);
       }
       this.updateTotalPrice();
+      this.saveToLocalStorage();
     }
   }
 
@@ -90,6 +110,7 @@ class CartStore {
   setOrderInfo(field, value) {
     this.orderInfo[field] = value;
     this.validateOrderInfo();
+    this.saveToLocalStorage();
   }
 
   validateOrderInfo() {
@@ -99,6 +120,7 @@ class CartStore {
 
   resetOrderField(field) {
     this.orderInfo[field] = "";
+    this.saveToLocalStorage();
   }
 
   resetErrors() {
@@ -109,11 +131,13 @@ class CartStore {
     Object.keys(this.orderInfo).forEach(key => {
       this.orderInfo[key] = "";
     });
+    this.saveToLocalStorage();
   }
 
   setDeliveryCost(cost) {
     this.deliveryCost = cost;
     this.updateTotalCost();
+    this.saveToLocalStorage();
   }
 
   updateTotalCost() {
@@ -138,15 +162,45 @@ class CartStore {
     };
 
     try {
-      const response = createOrder(orderData);
+      const response = await createOrder(orderData);
       console.log("Order submitted successfully:", response.data);
       this.clearOrderInfo();
       this.items = [];
       this.updateTotalPrice();
+      this.saveToLocalStorage();
       return true;
     } catch (error) {
       console.error("Error submitting order:", error);
       return false;
+    }
+  }
+
+  saveToLocalStorage() {
+    if (typeof window !== "undefined") {
+      const state = {
+        items: this.items,
+        orderInfo: this.orderInfo,
+        totalQuantity: this.totalQuantity,
+        totalPrice: this.totalPrice,
+        deliveryCost: this.deliveryCost,
+        totalCost: this.totalCost,
+      };
+      window.localStorage.setItem("CartStore", JSON.stringify(state));
+    }
+  }
+
+  loadFromLocalStorage() {
+    if (typeof window !== "undefined") {
+      const savedState = window.localStorage.getItem("CartStore");
+      if (savedState) {
+        const state = JSON.parse(savedState);
+        this.items = state.items || [];
+        this.orderInfo = state.orderInfo || this.orderInfo;
+        this.totalQuantity = state.totalQuantity || 0;
+        this.totalPrice = state.totalPrice || 0;
+        this.deliveryCost = state.deliveryCost || 0;
+        this.totalCost = state.totalCost || 0;
+      }
     }
   }
 }

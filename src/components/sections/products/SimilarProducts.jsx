@@ -1,10 +1,17 @@
-import products from "@/data/products.json";
-import ProductItem from "./ProductItem";
+"use client";
 
-const SimilarProducts = ({ category, id }) => {
+import { observer } from "mobx-react";
+// import products from "@/data/products.json";
+import ProductItem from "./ProductItem";
+import productsStore from "@/store/productsStore";
+
+const SimilarProducts = observer(({ category, _id }) => {
+  const { products } = productsStore;
   const filteredProducts = products.filter(
-    product => product.category === category && product.id !== id
+    product => product.category === category && product._id !== _id
   );
+
+  console.log("products", products);
 
   const randomProducts = [];
   while (randomProducts.length < 4) {
@@ -15,9 +22,9 @@ const SimilarProducts = ({ category, id }) => {
   return (
     <div className="grid grid-cols-4 gap-y-5">
       {randomProducts &&
-        randomProducts.map(el => <ProductItem key={el.id} item={el} page="products" />)}
+        randomProducts.map(el => <ProductItem key={el.title} item={el} page="products" />)}
     </div>
   );
-};
+});
 
 export default SimilarProducts;

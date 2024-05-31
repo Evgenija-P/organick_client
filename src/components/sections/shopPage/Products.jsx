@@ -3,12 +3,17 @@
 import React, { useState, useEffect, useRef } from "react";
 
 import Wrapper from "../../Wrapper";
-import products from "@/data/products.json";
+// import products from "@/data/products.json";
 import ProductItem from "../products/ProductItem";
+import { observable } from "mobx";
+import productsStore from "@/store/productsStore";
 
-const Products = () => {
+const Products = observable(() => {
   const [loadedProducts, setLoadedProducts] = useState(4);
   const [visibleProducts, setVisibleProducts] = useState([]);
+  const products = productsStore.products;
+
+  console.log("ProductsComponent", products);
 
   const containerRef = useRef(null);
 
@@ -43,6 +48,6 @@ const Products = () => {
       </Wrapper>
     </section>
   );
-};
+});
 
 export default Products;

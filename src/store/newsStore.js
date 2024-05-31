@@ -1,10 +1,33 @@
-import { makeAutoObservable } from "mobx";
+import { makeAutoObservable, runInAction, action } from "mobx";
+import { makePersistable } from "mobx-persist-store";
 
 class NewsStore {
   news = [];
 
   constructor() {
-    makeAutoObservable(this);
+    makeAutoObservable(this, {
+      setNews: action,
+      addNewsItem: action,
+      removeNewsItem: action,
+    });
+    if (typeof window !== "undefined") {
+      makePersistable(this, {
+        name: "news",
+        properties: ["news"],
+        storage: window.localStorage,
+      })
+        .then(() => {
+          runInAction(() => {
+            this.news = Array.isArray(this.news) ? this.news : [];
+          });
+        })
+        .catch(error => {
+          console.error("Failed to make persistable:", error);
+          runInAction(() => {
+            this.news = [];
+          });
+        });
+    }
   }
 
   setNews(news) {

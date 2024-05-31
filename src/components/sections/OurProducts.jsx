@@ -1,15 +1,15 @@
 "use client";
 
 import React, { useState } from "react";
-
+import { observable } from "mobx";
 import Title from "../Title";
 import Subtitle from "../Subtitle";
 import Wrapper from "../Wrapper";
-import products from "@/data/products.json";
 import Button from "../UI/Buttons";
 import ProductItem from "./products/ProductItem";
+// import productsStore from "@/store/productsStore";
 
-const OurProducts = () => {
+const OurProducts = observable(({ products }) => {
   const [visibleProducts, setVisibleProducts] = useState(4);
 
   const showMoreProducts = () => {
@@ -25,7 +25,7 @@ const OurProducts = () => {
         </div>
         <div className="grid grid-cols-4 gap-y-5">
           {products.slice(0, visibleProducts).map(el => (
-            <ProductItem key={el.id} item={el} page="products" />
+            <ProductItem key={el.title} item={el} page="products" />
           ))}
         </div>
         {visibleProducts < products.length && (
@@ -36,6 +36,6 @@ const OurProducts = () => {
       </Wrapper>
     </section>
   );
-};
+});
 
 export default OurProducts;

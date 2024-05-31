@@ -6,7 +6,7 @@ import AdditionalInfo from "./AdditionalInfo";
 import SimilarProducts from "./SimilarProducts";
 
 const AboutProduct = ({ item }) => {
-  const { title, stars, old_price, current_price, id, img, category } = item;
+  const { title, stars, old_price, current_price, _id, img, category } = item;
   return (
     <section className="w-full h-fit pt-[133px] mb-[90px]">
       <Wrapper>
@@ -32,7 +32,7 @@ const AboutProduct = ({ item }) => {
           </div>
           <AdditionalInfo about={1} details={1} />
         </article>
-        <SimilarProducts category={category} id={id} />
+        <SimilarProducts category={category} id={_id} />
       </Wrapper>
     </section>
   );

@@ -6,6 +6,7 @@ import hero_3 from "@/images/hero_3.png";
 import hero_6 from "@/images/hero_6.png";
 import hero_7 from "@/images/hero_7.png";
 import HeroOtherPage from "@/components/sections/HeroOtherPages";
+import { baseURL } from "@/api/configurations";
 
 const ITEMS = [
   { id: "1", url: hero_6, style: "absolute bottom-[50px] left-[700px]", alt: "" },
@@ -13,8 +14,25 @@ const ITEMS = [
   { id: "3", url: hero_3, style: "absolute top-[-25px] left-[52%] rotate-[89deg]", alt: "" },
   { id: "4", url: hero_7, style: "absolute bottom-10 right-[35%]", alt: "" },
 ];
+// async function getData() {
+//   const res = await fetch(`${baseURL}/product`, {
+//     method: "GET",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     cache: "force-cache",
+//   });
 
-export default function ShopPage() {
+//   if (!res.ok) {
+//     throw new Error("Failed to fetch data");
+//   }
+//   const data = res.json();
+//   productsStore.setProducts(data);
+//   return data;
+// }
+
+export default async function ShopPage() {
+  // const products = await getData();
   return (
     <main className="w-full">
       <HeroOtherPage items={ITEMS} title={"Shop"} className={"shop"} />
