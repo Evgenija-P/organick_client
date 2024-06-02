@@ -1,19 +1,27 @@
 import Image from "next/image";
 import Wrapper from "@/components/Wrapper";
 import Hero from "@/images/quality/hero.png";
-import Photo_1 from "@/images/quality/photo_1.png";
-import Photo_2 from "@/images/quality/photo_2.png";
 
 const ITEMS = [
   {
-    title: "Why Organic",
-    img: Photo_1,
-    text: "Sed ut perspiciatis unde omnis iste natus error sit voluptat. page editors now use Lorem Ipsum as their default model text, and auncover.",
+    title: "Заборона використання хімічних пестицидів та гербіцидів",
+    text: "Одним із основних принципів органічного вирощування є відмова від використання шкідливих хімічних речовин. Вирощувачі органічних продуктів повинні використовувати природні альтернативи для боротьби зі шкідниками та бур'янами. Це може включати в себе використання екологічно безпечних методів, таких як використання вегетаційних покривів та використання природних хімічних сполук.",
   },
   {
-    title: "Speciality Produce",
-    img: Photo_2,
-    text: "Sed ut perspiciatis unde omnis iste natus error sit voluptat. page editors now use Lorem Ipsum as their default model text, and auncover.",
+    title: "Дотримання вимог щодо добрив",
+    text: "У вирощуванні органічних продуктів важливо використовувати органічні добрива, які не містять синтетичних речовин. Це допомагає підтримувати родючість ґрунту та зберігати його природний баланс.",
+  },
+  {
+    title: "Прозорість у виробництві",
+    text: "Система органічного виробництва передбачає прозорість у всіх аспектах процесу, від вирощування до збуту продукції. Виробники повинні відповідати стандартам органічного сертифікування та забезпечувати інформацію про умови вирощування та обробки.",
+  },
+  {
+    title: "Дотримання екологічних стандартів у вирощуванні",
+    text: "Органічне вирощування сприяє збереженню біорізноманіття та підтримці екосистем. Виробники органічних продуктів повинні дотримуватися екологічних стандартів, які сприяють збереженню природних ресурсів та уникненню забруднення довкілля.",
+  },
+  {
+    title: "Відсутність ГМО",
+    text: "Органічні продукти не повинні містити генетично модифікованих організмів (ГМО). Це означає, що виробники повинні використовувати лише натуральні, не модифіковані сорти рослин.",
   },
 ];
 
@@ -21,35 +29,38 @@ const QualityItem = () => {
   return (
     <section className={`w-full h-fit relative overflow-hidden`}>
       <Wrapper styles={"w-full h-fit pt-[162px] pb-[80px] flex flex-col gap-y-[70px]"}>
-        <Image src={Hero} width={1400} height={742} alt="" className="mx-auto" />
+        <Image
+          src={Hero}
+          width={1400}
+          height={742}
+          alt="зображення зелених насаджен та чоловіка, що працює із зеленими насадженнями"
+          className="mx-auto"
+        />
         <div className="w-[936px] mx-auto flex flex-col">
-          <h2 className="text-[50px] font-extrabold mb-8">Organic Store Services</h2>
-          <p className="text-grey text-lg mb-[70px]">
-            t is a long established fact that a reader will be distracted by the readable content of
-            a page when looking a layout. The point of using Lorem Ipsum is that it has a
-            more-or-less normal distribution of letters, as opposed to using 'Content here, content
-            here', making it look like readable English. Many desktop publishing packages and web
-            page editors now use Lorem Ipsum as their default model text, and auncover many web
-            sites still in their infancy. Various versions have evolved over the years
+          <h2 className="text-[50px] font-extrabold mb-8">
+            Стандарти якості у вирощуванні органічних продуктів: Забезпечення чистоти в садах та на
+            фермах
+          </h2>
+          <p className="text-grey text-lg mb-[50px]">
+            Вирощування органічних продуктів - це не лише питання смаку, але й підтримки здоров'я та
+            довкілля. У світі, де свідомість щодо важливості харчування зростає, стандарти якості
+            вирощування органічної їжі набувають все більшого значення. Давайте розглянемо деякі з
+            них, особливо в контексті вирощування фруктів, овочів, спецій, зелені, круп та горіхів.
           </p>
         </div>
 
-        <ul className="w-[936px] mx-auto flex flex-col gap-y-7">
+        <ul className="w-[936px] mx-auto flex flex-col gap-y-10">
           {ITEMS.map((el, index) => (
             <li
               key={el.title}
-              className={`w-full h-[252px] flex gap-x-5 items-center justify-center ${
+              className={`w-full h-fit flex gap-x-5 items-center justify-center ${
                 index % 2 === 1 ? "flex-row-reverse" : ""
               }`}
             >
-              <Image
-                src={el.img}
-                width={379}
-                height={252}
-                alt={`Photo ${el.title}`}
-                className="rounded-[20px] object-cover"
-              />
-              <div className="w-[573px] h-full rounded-[20px] bg-lite_pink py-[63px] px-[45px] flex flex-col ">
+              <p className="w-[25%] text-8xl h-full rounded-2xl bg-main text-white text-center py-10">
+                0{index + 1}
+              </p>
+              <div className="w-[75%] h-full rounded-[20px] bg-lite_pink py-[63px] px-[45px] flex flex-col ">
                 <h4 className="text-[25px] font-medium">{el.title}</h4>
                 <p className="text-lg text-grey">{el.text}</p>
               </div>
@@ -58,29 +69,13 @@ const QualityItem = () => {
         </ul>
 
         <div className="w-[936px] mx-auto flex flex-col">
-          <h2 className="text-[50px] font-extrabold mb-8">We farm your land</h2>
+          <h2 className="text-[50px] font-extrabold mb-8">Підсумовуючи</h2>
           <p className="text-grey text-lg mb-[60px]">
-            t is a long established fact that a reader will be distracted by the readable content of
-            a page when looking a layout. The point of using Lorem Ipsum is that it has a
-            more-or-less normal distribution of letters, as opposed to using 'Content here, content
-            here', making it look like readable English. Many desktop publishing packages and web
-            page editors now use Lorem Ipsum as their default model text, and auncover many web
-            sites still in their infancy. Various versions have evolved over the years
+            Стандарти якості у вирощуванні органічних продуктів є основою для забезпечення якості,
+            безпеки та стабільності у цій галузі. Дотримання цих стандартів дозволяє споживачам бути
+            впевненими у якості та користі органічних продуктів, а також сприяє збереженню
+            навколишнього середовища та підтримці здоров'я.
           </p>
-          <ul className="flex items-center justify-between">
-            <li className="w-[390px] h-[100px] rounded-[100px] py-[15px] px-[17px] flex gap-x-[25px] items-center bg-lite_pink">
-              <p className="w-[69px] h-[69px] rounded-full flex items-center justify-center text-white text-[25px] font-bold bg-green">
-                01
-              </p>
-              <p className="text-[25px] font-semibold">Best quality support</p>
-            </li>
-            <li className="w-[390px] h-[100px] rounded-[100px] py-[15px] px-[17px] flex gap-x-[25px] items-center bg-lite_pink">
-              <p className="w-[69px] h-[69px] rounded-full flex items-center justify-center text-white text-[25px] font-bold bg-green">
-                02
-              </p>
-              <p className="text-[25px] font-semibold">Money back guarantee</p>
-            </li>
-          </ul>
         </div>
       </Wrapper>
     </section>

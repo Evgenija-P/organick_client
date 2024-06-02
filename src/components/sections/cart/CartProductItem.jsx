@@ -2,12 +2,13 @@ import { observer } from "mobx-react-lite";
 import Image from "next/image";
 import Quantity from "../products/Quantity";
 import { useStore } from "@/store/StoreProvider";
+import { Trash } from "@/icons/iconComponent";
 
 const CartProductItem = observer(({ item }) => {
   const { cartStore } = useStore();
 
-  const { title, img, current_price, id } = item;
-  const total = (cartStore.quantityProduct(id) * current_price).toFixed(2);
+  const { title, img, current_price, _id } = item;
+  const total = (cartStore.quantityProduct(_id) * current_price).toFixed(2);
 
   return (
     <li className="w-full h-[90px] py-4 px-2 grid grid-cols-cartItem items-center justify-between border-b border-green">
@@ -23,7 +24,9 @@ const CartProductItem = observer(({ item }) => {
       <p className="pr-1">
         {total} {"\u20B4"}
       </p>
-      <button>del</button>
+      <button onClick={() => cartStore.removeFromCart(_id)}>
+        <Trash />
+      </button>
     </li>
   );
 });

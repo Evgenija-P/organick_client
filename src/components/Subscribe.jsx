@@ -4,7 +4,7 @@ const SubscribeForm = () => {
   return (
     <article className="w-full h-[323px] flex items-center justify-between px-[71px] bg-subscribe rounded-[30px]">
       <h4 className="w-[357px] text-[50px] font-extrabold text-white leading-none">
-        Subscribe to our Newsletter
+        Підписка на наші новини
       </h4>
       <form className="w-[575px] flex gap-x-[6px]">
         <input
@@ -13,7 +13,7 @@ const SubscribeForm = () => {
         />
 
         <Button btnType="submit" style={"main"}>
-          Subscribe
+          Підписатися
         </Button>
       </form>
     </article>

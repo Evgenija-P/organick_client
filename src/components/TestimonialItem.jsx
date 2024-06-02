@@ -10,13 +10,14 @@ const TestimonialItem = () => {
       <div className="flex flex-col gap-y-[25px] justify-between items-center mx-auto">
         <Stars active={5} />
         <p className="text-center">
-          Simply dummy text of the printing and typesetting industry. Lorem Ipsum simply dummy text
-          of the printing and typesetting industry. Lorem Ipsum has been.
+          Професійні екологи, які знаються на своїй справі. Чудові аграрії. Пропонують дійсно свіжі
+          та екологічно чисті продукти за помірною ціною. Швидка доставка. За необхідності нададуть
+          консультацію по всім питанням.
         </p>
       </div>
       <div className="w-full flex flex-col">
-        <p className="text-[25px] text-main font-semibold text-center">Sara Taylor</p>
-        <p className="text-[15px] text-grey text-center">Consumer</p>
+        <p className="text-[25px] text-main font-semibold text-center">Олеся Кузмицька</p>
+        <p className="text-[15px] text-grey text-center">Покупець</p>
       </div>
     </article>
   );

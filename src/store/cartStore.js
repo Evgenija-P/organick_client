@@ -22,6 +22,8 @@ class CartStore {
   totalPrice = 0;
   deliveryCost = 0;
   totalCost = 0;
+  orderNumber = "";
+  orderId = "";
 
   constructor() {
     makeAutoObservable(this, {
@@ -45,7 +47,7 @@ class CartStore {
   }
 
   addToCart(product) {
-    const existingProduct = this.items.find(item => item.id === product.id);
+    const existingProduct = this.items.find(item => item._id === product._id);
     if (existingProduct) {
       existingProduct.quantity += 1;
     } else {
@@ -56,18 +58,18 @@ class CartStore {
   }
 
   quantityProduct(productId) {
-    const existingProduct = this.items.find(item => item.id === productId);
+    const existingProduct = this.items.find(item => item._id === productId);
     return existingProduct?.quantity;
   }
 
-  removeFromCart(id) {
-    this.items = this.items.filter(item => item.id !== id);
+  removeFromCart(productId) {
+    this.items = this.items.filter(item => item._id !== productId);
     this.updateTotalPrice();
     this.saveToLocalStorage();
   }
 
-  increaseQuantity(id) {
-    const product = this.items.find(item => item.id === id);
+  increaseQuantity(productId) {
+    const product = this.items.find(item => item._id === productId);
     if (product) {
       product.quantity += 1;
       this.updateTotalPrice();
@@ -75,13 +77,13 @@ class CartStore {
     }
   }
 
-  decreaseQuantity(id) {
-    const product = this.items.find(item => item.id === id);
+  decreaseQuantity(productId) {
+    const product = this.items.find(item => item._id === productId);
     if (product) {
       if (product.quantity > 1) {
         product.quantity -= 1;
       } else {
-        this.removeFromCart(id);
+        this.removeFromCart(productId);
       }
       this.updateTotalPrice();
       this.saveToLocalStorage();
@@ -153,7 +155,7 @@ class CartStore {
     const orderData = {
       ...this.orderInfo,
       products: this.items.map(item => ({
-        product: item.id,
+        product: item._id,
         quantity: item.quantity,
       })),
       summa: this.totalPrice,
@@ -163,9 +165,12 @@ class CartStore {
 
     try {
       const response = await createOrder(orderData);
-      console.log("Order submitted successfully:", response.data);
+  
       this.clearOrderInfo();
       this.items = [];
+      this.orderNumber = response.order_number;
+      this.orderId = response._id;
+
       this.updateTotalPrice();
       this.saveToLocalStorage();
       return true;

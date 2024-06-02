@@ -6,16 +6,16 @@ import Banner from "../Banner";
 const ITEMS = [
   {
     id: "1",
-    title: "Natural!!",
-    subtitle: "Get Garden Fresh Fruits",
+    title: "Натуральні!!",
+    subtitle: "З нашого огороду до Вашого столу",
     type: "white",
     style: "",
     url: banner_1,
   },
   {
     id: "2",
-    title: "Offer!!",
-    subtitle: "Get 10% off on Vegetables",
+    title: "Пропозиція!!",
+    subtitle: "Отримайте 10% знижки на овочі",
     type: "black",
     style: "",
     url: banner_2,

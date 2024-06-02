@@ -12,13 +12,14 @@ const MENU_ITEMS = [
   { id: "5", name: "Новини", link: "/news", aria: "link to news page" },
   { id: "6", name: "Послуги", link: "/services", aria: "link to services page", icon: "" },
   { id: "7", name: "Контакти", link: "/contacts", aria: "link to contacts page" },
+  { id: "8", name: "Адмін", link: "/admin", aria: "link to admin page" },
 ];
 
 const Menu = ({ styles, section }) => {
   const pathname = usePathname();
 
   return (
-    <nav className={`w-[564px] flex justify-between text-xl ${styles || ""}`}>
+    <nav className={`min-w-[564px] flex gap-x-4 justify-between text-xl ${styles || ""}`}>
       {MENU_ITEMS.map(el => (
         <Link
           href={el.link}

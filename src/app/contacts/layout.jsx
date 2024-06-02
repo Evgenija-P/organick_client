@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Our contacts",
-  description: "contacts",
+  title: "Наші контакти",
+  description: "контакти",
 };
 
 export default function ContactsLayout({ children }) {

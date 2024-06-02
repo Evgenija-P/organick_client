@@ -21,7 +21,7 @@ const CartList = observer(() => {
             <p className="text-green text-lg font-bold">Сума</p>
           </li>
           {products.map(el => (
-            <CartProductItem key={el.id} item={el} />
+            <CartProductItem key={el._id} item={el} />
           ))}
         </>
       )}

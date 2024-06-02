@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Our team",
-  description: "team",
+  title: "Наша коанда",
+  description: "команда",
 };
 
 export default function TeamLayout({ children }) {

@@ -2,37 +2,37 @@
   {
     "id": "1",
     "img": "/images/services/bottle.png",
-    "title": "Dairy Products",
-    "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremqlaudantium. Sed ut perspiciatis"
+    "title": "Молочні продукти",
+    "text": "Всіжі молочні продукти від наших партнерів, що займаються екологічними молочними та м'ясними продуктами."
   },
   {
     "id": "2",
     "img": "/images/services/store.png",
-    "title": "Store Services",
-    "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremqlaudantium. Sed ut perspiciatis"
+    "title": "Послуги магазину",
+    "text": "Ви можете замовити необхідні товари прямо у нас на сайті."
   },
   {
     "id": "3",
     "img": "/images/services/delivery.png",
-    "title": "Delivery Services",
-    "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremqlaudantium. Sed ut perspiciatis"
+    "title": "Послуги доставки",
+    "text": "Ми доставимо Вам всі обрані продукти швидко та з дотриманням вимог зберігання."
   },
   {
     "id": "4",
     "img": "/images/services/fresh.png",
-    "title": "Agricultural Services",
-    "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremqlaudantium. Sed ut perspiciatis"
+    "title": "Сільськогосподарські послуги",
+    "text": "Пропонуємо екологічно чисті добрива та новітні розробки у питаннях вирощування продуктів."
   },
   {
     "id": "5",
     "img": "/images/services/products.png",
-    "title": "Organic Products",
-    "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremqlaudantium. Sed ut perspiciatis"
+    "title": "Органічні продукти",
+    "text": "Свіжі, натуральні, екологічно чисті продукти, які проходять дворіневу перевірку та не містять фосфатів та ГМО."
   },
   {
     "id": "6",
     "img": "/images/services/vegetables.png",
-    "title": "Fresh Vegetables",
-    "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremqlaudantium. Sed ut perspiciatis"
+    "title": "Свіжі овочі",
+    "text": "Свіжі овочі, зібрань не більше як за 12 годин до доставки."
   }
 ]

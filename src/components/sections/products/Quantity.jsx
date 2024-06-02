@@ -7,18 +7,18 @@ import { useStore } from "@/store/StoreProvider";
 const Quantity = observer(({ item, page }) => {
   const { cartStore } = useStore();
 
-  const { id } = item;
+  const { _id } = item;
 
-  const value = id => {
-    if (cartStore.quantityProduct(id)) {
-      return cartStore.quantityProduct(id);
+  const value = _id => {
+    if (cartStore.quantityProduct(_id)) {
+      return cartStore.quantityProduct(_id);
     }
     return 0;
   };
 
   function increaseProduct() {
-    if (cartStore.quantityProduct(id)) {
-      cartStore.increaseQuantity(id);
+    if (cartStore.quantityProduct(_id)) {
+      cartStore.increaseQuantity(_id);
     } else {
       cartStore.addToCart(item);
     }
@@ -38,8 +38,8 @@ const Quantity = observer(({ item, page }) => {
           className={`${
             page === "cart" ? "text-[20px]" : "text-[30px]"
           } font-semibold text-green hover:text-main w-[28%] h-full`}
-          onClick={() => cartStore.decreaseQuantity(id)}
-          disabled={value(id) === 0}
+          onClick={() => cartStore.decreaseQuantity(_id)}
+          disabled={value(_id) === 0}
         >
           -
         </button>
@@ -48,7 +48,7 @@ const Quantity = observer(({ item, page }) => {
             page === "cart" ? "text-[30px]" : "text-[40px]"
           } w-[33%] text-center font-semibold`}
         >
-          {value(id) || 0}
+          {value(_id) || 0}
         </p>
         <button
           className={`${

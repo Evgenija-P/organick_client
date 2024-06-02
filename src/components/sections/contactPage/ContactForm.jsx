@@ -9,15 +9,15 @@ const TEXT_FIELDS = [
   {
     id: "1",
     name: "name",
-    label: "Full Name",
+    label: "Ім'я та прізвище",
     defaultValue: "",
-    placeholder: "Your Name",
+    placeholder: "Ваше ім'я",
     type: "input",
   },
   {
     id: "2",
     name: "email",
-    label: "Your Email",
+    label: "Ваша пошта",
     defaultValue: "",
     placeholder: "example@yourmail.com",
     type: "email",
@@ -25,17 +25,17 @@ const TEXT_FIELDS = [
   {
     id: "3",
     name: "company",
-    label: "Company",
+    label: "Компанія",
     defaultValue: "",
-    placeholder: "your company name here",
+    placeholder: "Назва Вашої компанії",
     type: "input",
   },
   {
     id: "4",
     name: "subject",
-    label: "Subject",
+    label: "Напрямок",
     defaultValue: "",
-    placeholder: "how can we help",
+    placeholder: "Напрямок співпраці",
     type: "input",
   },
   {
@@ -63,7 +63,6 @@ const ContactForm = () => {
   });
 
   const onSubmit = data => {
-    console.log(data);
     createFeedback(data);
     reset();
   };
@@ -92,7 +91,7 @@ const ContactForm = () => {
       ))}
 
       <Button style={"main"} btnType={"submit"}>
-        Send Message
+        Відправити повідомлення
       </Button>
     </form>
   );

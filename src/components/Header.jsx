@@ -15,7 +15,6 @@ export const Header = observer(() => {
       <Logo />
       <Menu section="header" />
       <div className="flex gap-x-8 items-center">
-        <div>search form</div>
         <Link
           href="/cart"
           className="w-[159px] h-[66px] rounded-[33px] border border-[#E0E0E0] p-[5px] flex items-center gap-x-2 hover:bg-main hover:text-white"

@@ -166,6 +166,10 @@ ol {
   fill: #274c5b;
 }
 
+.trash-icons {
+  stroke: #274c5b;
+}
+
 .soc-link:hover .soc-icons {
   fill: #eff6f1;
 }
@@ -185,11 +189,14 @@ ol {
 }
 
 .cart {
-  /* fill: white; */
   stroke: white;
 }
 
 button:hover .cross {
+  stroke: #7eb693;
+}
+
+button:hover .trash-icons {
   stroke: #7eb693;
 }
 
@@ -198,10 +205,17 @@ button:hover .play {
 }
 
 a:hover .cart {
-  /* fill: #274c5b; */
   stroke: #274c5b;
 }
 
 a:hover .cart-wrapper {
   background: #fff;
+}
+
+.plus {
+  stroke: #274c5b;
+}
+
+.minus {
+  fill: #274c5b;
 }

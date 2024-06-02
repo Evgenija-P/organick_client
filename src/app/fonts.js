@@ -1,4 +1,4 @@
-import { Roboto, Open_Sans, Yellowtail } from "next/font/google";
+import { Roboto, Open_Sans, Pacifico } from "next/font/google";
 
 const roboto = Roboto({
   weight: ["300", "400", "500", "700", "900"],
@@ -12,6 +12,6 @@ const openSans = Open_Sans({
   display: "swap",
 });
 
-const yellowtail = Yellowtail({ weight: "400", subsets: ["latin"] });
+const pacifico = Pacifico({ weight: "400", subsets: ["cyrillic"] });
 
-export { roboto, openSans, yellowtail };
+export { roboto, openSans, pacifico };

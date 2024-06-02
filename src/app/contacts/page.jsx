@@ -21,7 +21,7 @@ const ITEMS = [
 export default function ContactsPage() {
   return (
     <main className="w-full">
-      <HeroOtherPage title={"Contact Us"} items={ITEMS} className={"contacts"} />
+      <HeroOtherPage title={"Зв'яжіться з нами"} items={ITEMS} className={"contacts"} />
       <ContactList />
       <Subscribe />
     </main>

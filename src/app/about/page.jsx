@@ -22,7 +22,7 @@ const ITEMS = [
 export default function AboutPage() {
   return (
     <main className="w-full">
-      <HeroOtherPage items={ITEMS} title={"About Us"} className={"about"} />
+      <HeroOtherPage items={ITEMS} title={"Про нас"} className={"about"} />
       <AboutUs />
       <Choose />
       <Teams page={"about"} />

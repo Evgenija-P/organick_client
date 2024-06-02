@@ -5,30 +5,29 @@ const Friendly = () => {
   return (
     <section className="w-full h-[931px] py-[200px] bg-friendly bg-left bg-no-repeat relative">
       <div className="w-[789px] h-[723px] py-[78px] px-[89px] rounded-[30px] bg-white absolute top-[100px] left-[calc(50%-81px)]">
-        <Title style={"mb-2"}>Eco Friendly</Title>
+        <Title style={"mb-2"}>Екологічно чистий</Title>
         <Subtitle>
-          Econis is a Friendly <br /> Organic Store
+          Наш магазин пропонує <br /> тільки органічні продукти
         </Subtitle>
         <ul className="flex flex-col gap-y-[35px] mt-[35px]">
           <li className="w-full flex flex-col gap-y-1">
-            <p className="text-[25px] font-medium">Start with Our Company First</p>
+            <p className="text-[25px] font-medium">Зробіть перший крок із нашою компанією.</p>
             <p className="text-lg text-grey">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremque
-              laudantium. Sed ut perspiciatis.
+              Зробіть перші кроки до більш здорового та повноцінного життя з продуктами з наших
+              ферм!
             </p>
           </li>
           <li className="w-full flex flex-col gap-y-1">
-            <p className="text-[25px] font-medium">Learn How to Grow Yourself</p>
+            <p className="text-[25px] font-medium">Дізнайтеся, як стати нашим партнером</p>
             <p className="text-lg text-grey">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremque
-              laudantium. Sed ut perspiciatis.
+              Станьте нашим партнером по вирощуванню чи продажу екологічно здорових продуктів!
             </p>
           </li>
           <li className="w-full flex flex-col gap-y-1">
-            <p className="text-[25px] font-medium">Farming Strategies of Today</p>
+            <p className="text-[25px] font-medium">Опануйте нове</p>
             <p className="text-lg text-grey">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremque
-              laudantium. Sed ut perspiciatis.
+              Дізнавайтеся про нові напрямки у вирощуванні екологічних продуктів, нові стандарти
+              обробки землі та інше!
             </p>
           </li>
         </ul>

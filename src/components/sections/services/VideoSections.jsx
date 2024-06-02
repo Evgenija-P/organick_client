@@ -16,11 +16,11 @@ const VideoSections = () => {
     <section className="w-full h-[1073px] py-[80px] bg-videoSection mb-[140px]">
       <Wrapper styles={""}>
         <div className="w-[671px] mx-auto">
-          <Title style={"text-center"}>Organic only </Title>
-          <Subtitle className={"text-center"}>Everyday Fresh & Clean</Subtitle>
+          <Title style={"text-center"}>Наша робота </Title>
+          <Subtitle className={"text-center"}>Дізнайтися, як ми працюємо</Subtitle>
           <p className="text-lg text-grey text-center my-10">
-            Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the
-            industry's standard dummy text ever since the
+            Цей маленький відоеролик допоможе зрозуміти, що та як ми робимо на наших фермах, та чому
+            наші продукти дійсно є екологічними та корисними. Натискайте на кнопку та дивіться!
           </p>
         </div>
 

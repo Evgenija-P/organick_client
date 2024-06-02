@@ -11,12 +11,12 @@ const About = () => {
     <section className="w-full min-h-[1067px] pt-[186px] pb-[200px] bg-lite_pink bg-about bg-no-repeat bg-left relative">
       <Wrapper styles={"flex justify-around"}>
         <div className="w-[702px] absolute top-[186px] right-[15%] flex flex-col">
-          <Title style={"mb-2"}>About Us</Title>
-          <Subtitle>We Believe in Working Accredited Farmers</Subtitle>
+          <Title style={"mb-2"}>Про нас</Title>
+          <Subtitle>Ми працюємо тільки з перевіреними фермерами</Subtitle>
           <p className="mt-4 mb-[46px] text-lg">
-            Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a
-            galley.
+            Для нас дуже важливо дотримуватись всіх стандартів та вимог. То ж ми співпрацюємо тільки
+            з тими фермами та садівниками, які перевірили самі. Якість продукції наших партнерів
+            завжди під контролем!
           </p>
 
           <ul className="flex flex-col gap-y-[30px] w-[562px]">
@@ -26,9 +26,9 @@ const About = () => {
               </div>
 
               <ul className="flex flex-col gap-y-2 w-[440px]">
-                <li className="text-main text-[25px] font-extrabold">Organic Foods Only</li>
+                <li className="text-main text-[25px] font-extrabold">Тільки органічна продукція</li>
                 <li className="text-gray text-[18px]">
-                  Simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                  Продукція, яка вирощена без хімікатів та ГМО.
                 </li>
               </ul>
             </li>
@@ -37,14 +37,14 @@ const About = () => {
                 <Image src={Quality} className="" alt="icon depicting food delivery" />
               </div>
               <ul className="flex flex-col gap-y-2 w-[440px]">
-                <li className="text-main text-[25px] font-extrabold">Quality Standards</li>
+                <li className="text-main text-[25px] font-extrabold">Стандарти якості</li>
                 <li className="text-gray text-[18px]">
-                  Simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                  Щорічне підтвердження кваліфікації наших партнерів.
                 </li>
               </ul>
             </li>
 
-            <LinkButton title="Read More" goTo="/about" style="main" />
+            <LinkButton title="Дізнатися більше" goTo="/about" style="main" />
           </ul>
         </div>
       </Wrapper>

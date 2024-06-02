@@ -1,5 +1,5 @@
 import { Fb, Insta, TikTok } from "@/icons/iconComponent";
-import { yellowtail } from "@/app/fonts";
+import { pacifico } from "@/app/fonts";
 import Image from "next/image";
 
 const ICONS = {
@@ -17,7 +17,7 @@ const TeamItem = ({ item }) => {
       <div className="w-full h-[130px] py-[35px] px-7 flex items-center justify-between">
         <div>
           <p className="text-[25px] font-medium">{name}</p>
-          <p className={`${yellowtail.className} text-green text-[22px]`}>{position}</p>
+          <p className={`${pacifico.className} text-green text-[22px]`}>{position}</p>
         </div>
         <div className="flex gap-x-4 items-center">
           {Object.keys(socLinks).map(key => {

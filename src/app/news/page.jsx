@@ -19,10 +19,10 @@ const ITEMS = [
   { id: "4", url: hero_14, style: "absolute bottom-[25%] right-[30%]", alt: "" },
 ];
 
-export default function NewsPage() {
+export default async function NewsPage() {
   return (
     <main className="w-full">
-      <HeroOtherPage title={"Recent news"} items={ITEMS} className={"news"} />
+      <HeroOtherPage title={"Останні новини"} items={ITEMS} className={"news"} />
       <News page={"news"} />
       <Subscribe />
     </main>

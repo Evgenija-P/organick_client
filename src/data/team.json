@@ -1,7 +1,7 @@
 [
   {
-    "name": "Giovani Bacardo",
-    "position": "Farmer",
+    "name": "Джованні Бакардо",
+    "position": "Фермер",
     "img": "/images/team/experts.png",
     "socLinks": {
       "fb": "https://www.facebook.com/",
@@ -10,32 +10,32 @@
     }
   },
   {
-    "name": "Marianne Loreno",
-    "position": "Designer",
+    "name": "Маріна Лодзенко",
+    "position": "Дизайнер",
     "img": "/images/team/experts_1.png",
     "socLinks": { "insta": "https://www.instagram.com/", "tiktok": "https://www.tiktok.com/" }
   },
   {
-    "name": "Riga Pelore",
-    "position": "Farmer",
+    "name": "Міла Ямпольська",
+    "position": "Фермер",
     "img": "/images/team/experts_2.png",
     "socLinks": { "fb": "https://www.facebook.com/", "tiktok": "https://www.tiktok.com/" }
   },
   {
-    "name": "Keira Knightley",
-    "position": "Designer",
+    "name": "Кетті Грановські",
+    "position": "Агроексперт",
     "img": "/images/team/experts_3.png",
     "socLinks": { "fb": "https://www.facebook.com/", "tiktok": "https://www.tiktok.com/" }
   },
   {
-    "name": "Scott Lawrence",
-    "position": "Farmer",
+    "name": "Михайло Любич",
+    "position": "Агроексперт",
     "img": "/images/team/experts_4.png",
     "socLinks": { "insta": "https://www.instagram.com/", "tiktok": "https://www.tiktok.com/" }
   },
   {
-    "name": "Karen Allen",
-    "position": "Designer",
+    "name": "Каріна Дубцова",
+    "position": "Дизайнер",
     "img": "/images/team/experts_5.png",
     "socLinks": { "fb": "https://www.facebook.com/", "insta": "https://www.instagram.com/" }
   }

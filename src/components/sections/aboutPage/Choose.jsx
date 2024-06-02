@@ -10,24 +10,24 @@ import Payment from "@/images/about/payment.png";
 
 const ITEMS = [
   {
-    title: "Return Policy",
+    title: "Повернення",
     imgUrl: Return,
-    text: "Simply dummy text of the printintypesetting industry.",
+    text: "Не задовільнила якість? Просто поверніть товар!",
   },
   {
-    title: "100% Fresh",
+    title: "100% Свіжості",
     imgUrl: Fresh,
-    text: "Simply dummy text of the printintypesetting industry.",
+    text: "Гарантуємо, що наша продукція свіжозібрана.",
   },
   {
-    title: "Support 24/7",
+    title: "Підтримка 24/7",
     imgUrl: Support,
-    text: "Simply dummy text of the printintypesetting industry.",
+    text: "Проконсультуємо з будь-якого питання.",
   },
   {
-    title: "Secured Payment",
+    title: "Надійність оплати",
     imgUrl: Payment,
-    text: "Simply dummy text of the printintypesetting industry.",
+    text: "Всі оплати захищені банком.",
   },
 ];
 
@@ -47,27 +47,30 @@ const Choose = () => {
       <Wrapper styles={"h-full"}>
         <div className="w-full flex gap-x-[50px] justify-between items-center mb-[90px]">
           <div className="w-[671px]">
-            <Title style={"mb-2"}>Why Choose us?</Title>
-            <Subtitle>We do not buy from the open market & traders.</Subtitle>
+            <Title style={"mb-2"}>Чому нас обирають?</Title>
+            <Subtitle>Ми не купуємо продукцію, а вирощуємо.</Subtitle>
             <p className="mt-[25px] text-grey text-lg mb-9">
-              Simply dummy text of the printing and typesetting industry. Lorem had ceased to been
-              the industry's standard the 1500s, when an unknown
+              То ж Ви можете бути цілком впевнені у якості та корисності наших продуктів. Ми завжди
+              дбаємо про те, аби кожен продукт приносив максимум задоволення та користі, а при його
+              вирощуванні було задіяно найкращу техніку та тільки органічну сировину.
             </p>
-            <ul className="w-[486px] flex flex-col gap-y-3">
+            <ul className="w-[650px] flex flex-col gap-y-3">
               <li className="w-[339px] h-[81px] bg-[#ECECEC] rounded-[49px] px-[27px] py-[29px] flex items-center">
                 <div className="w-[19px] h-[19px] rounded-full border-4 border-green mr-2" />
-                <p className="text-xl font-medium">100% Natural Product</p>
+                <p className="text-xl font-medium">100% Натуральні продукти</p>
               </li>
               <li className="pl-[60px] text-lg text-grey">
-                Simply dummy text of the printing and typesetting industry Lorem Ipsum
+                Натуральна сировина, натуральні добрива, дотримання технологій вирощування, поливу
+                та зберігання.
               </li>
               <li className="w-[339px] h-[81px] bg-[#ECECEC] rounded-[49px] px-[27px] py-[29px] flex items-center">
                 <div className="w-[19px] h-[19px] rounded-full border-4 border-green mr-2" />
-                <p className="text-xl font-medium"> Increases resistance</p>
+                <p className="text-xl font-medium">Укріплення імунної системи</p>
               </li>
 
               <li className="pl-[60px] text-lg text-grey">
-                Simply dummy text of the printing and typesetting industry Lorem Ipsum
+                Наші продукти містять вітаміни, мінерали та антиоксиданти, що сприяє зміцненню
+                імунної системи.
               </li>
             </ul>
           </div>

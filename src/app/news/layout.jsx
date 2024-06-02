@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "News",
-  description: "News",
+  title: "Новини",
+  description: "Новини",
 };
 
 export default function NewsLayout({ children }) {

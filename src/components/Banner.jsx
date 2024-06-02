@@ -1,4 +1,4 @@
-import { yellowtail } from "@/app/fonts";
+import { pacifico } from "@/app/fonts";
 import Image from "next/image";
 
 const Banner = ({ item }) => {
@@ -11,7 +11,7 @@ const Banner = ({ item }) => {
       />
       <div className="w-[263px] flex flex-col absolute top-[109px] left-[55px]">
         <span
-          className={`text-4xl ${yellowtail.className} mb-[5px] ${
+          className={`text-4xl ${pacifico.className} mb-[5px] ${
             item.type === "white" ? "text-white" : "text-green"
           }`}
         >

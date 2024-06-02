@@ -12,9 +12,11 @@ const HeroServices = () => {
   return (
     <section className="w-full h-fit py-[200px]">
       <Wrapper styles={""}>
-        <div className="w-[482px] mx-auto">
-          <Title style={"text-center"}>What we Grow </Title>
-          <Subtitle className={"text-center"}>Better Agriculture for Better Future</Subtitle>
+        <div className="w-[800px] mx-auto">
+          <Title style={"text-center"}>Що ми пропонуємо </Title>
+          <Subtitle className={"text-center"}>
+            Краще сільське господарство для кращого майбутнього
+          </Subtitle>
         </div>
         <div className="w-[1400px] h-[900px] flex items-center justify-between services-section">
           <ul className="w-[396px] flex flex-col gap-y-[39px]">
@@ -38,7 +40,7 @@ const HeroServices = () => {
         </div>
 
         <LinkButton
-          title="Explore More"
+          title="Дізнатися більше"
           goTo="/services/standard"
           style="transparent"
           className="w-[220px] mx-auto"

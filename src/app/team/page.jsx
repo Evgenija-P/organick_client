@@ -21,7 +21,7 @@ const ITEMS = [
 export default function TeamPage() {
   return (
     <main className="w-full">
-      <HeroOtherPage title={"Our Team"} items={ITEMS} className={"team"} />
+      <HeroOtherPage title={"Наша команда"} items={ITEMS} className={"team"} />
       <Teams />
       <Subscribe />
     </main>

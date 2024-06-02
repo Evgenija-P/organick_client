@@ -8,7 +8,7 @@ export default function StandardPage() {
       <section className={`w-full h-[450px] relative overflow-hidden quality`}>
         <Wrapper styles={"h-full"}>
           <div className="w-full h-full flex items-center justify-center">
-            <h1 className="text-7xl font-black">Quality Standard</h1>
+            <h1 className="text-7xl font-black">Стандарти якості</h1>
           </div>
         </Wrapper>
       </section>

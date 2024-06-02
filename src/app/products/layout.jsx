@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Shop",
-  description: "Shop",
+  title: "Магазин",
+  description: "Магазин",
 };
 
 export default function ShopLayout({ children }) {

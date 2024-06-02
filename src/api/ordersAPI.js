@@ -10,7 +10,7 @@ export const createOrder = async orderData => {
       body: JSON.stringify(orderData),
     });
     const data = await response.json();
-    console.log("createOrder", data);
+  
     return data;
   } catch (error) {
     console.error("Error:", error);
@@ -26,7 +26,23 @@ export const getAllOrders = async () => {
       },
     });
     const data = await response.json();
-    console.log(data);
+  
+    return data;
+  } catch (error) {
+    console.error("Error:", error);
+  }
+};
+
+export const getOrderById = async _id => {
+  try {
+    const response = await fetch(`${baseURL}/order/${_id}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const data = await response.json();
+
     return data;
   } catch (error) {
     console.error("Error:", error);

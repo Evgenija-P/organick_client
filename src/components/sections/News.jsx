@@ -3,10 +3,28 @@ import Subtitle from "../Subtitle";
 import Wrapper from "../Wrapper";
 import LinkButton from "../UI/LinkButton";
 import NewsItem from "./news/NewsItem";
-import news from "@/data/news.json";
+import { baseURL } from "@/api/configurations";
 
-const News = ({ page }) => {
-  const limitedNews = page === "news" ? news : news.slice(0, 2);
+export const getAllNews = async () => {
+  try {
+    const response = await fetch(`${baseURL}/news`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const data = await response.json();
+
+    return data;
+  } catch (error) {
+    console.error("Error:", error);
+  }
+};
+
+const News = async ({ page }) => {
+  const news = await getAllNews();
+
+  const limitedNews = page === "news" ? news : news?.slice(0, 2);
 
   return (
     <section
@@ -18,10 +36,15 @@ const News = ({ page }) => {
         {page === "home" && (
           <div className="flex items-end justify-between">
             <div className="w-[60%]">
-              <Title style={"mb-2"}>News</Title>
-              <Subtitle>Discover weekly content about organic food, & more</Subtitle>
+              <Title style={"mb-2"}>Новини</Title>
+              <Subtitle>Дізнайтесь більше про нове зі світу екологічних продуктів</Subtitle>
             </div>
-            <LinkButton title="More News" goTo="/news" style="transparent" className="px-[45px]" />
+            <LinkButton
+              title="Більше новин"
+              goTo="/news"
+              style="transparent"
+              className="px-[45px]"
+            />
           </div>
         )}
 

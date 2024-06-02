@@ -6,9 +6,23 @@ export const formatDate = dateString => {
     throw new Error("Invalid Date");
   }
 
-  // Отримати день та коротку назву місяця англійською
+  // Отримати день та назву місяця українською
   const dayNumber = date.getDate();
-  const monthName = date.toLocaleString("en-US", { month: "short" });
+  const monthNamesUkr = [
+    "січ",
+    "лют",
+    "бер",
+    "квіт",
+    "трав",
+    "чер",
+    "лип",
+    "сер",
+    "вер",
+    "жов",
+    "лист",
+    "груд",
+  ];
+  const monthName = monthNamesUkr[date.getMonth()];
 
   return { day: dayNumber, month: monthName };
 };

@@ -2,20 +2,17 @@
 
 import { createContext, useContext } from "react";
 import productsStore from "./productsStore";
-import newsStore from "./newsStore";
+
 import cartStore from "./cartStore";
 
 const StoreContext = createContext({
   productsStore,
-  newsStore,
   cartStore,
 });
 
 export const StoreProvider = ({ children }) => {
   return (
-    <StoreContext.Provider value={{ productsStore, newsStore, cartStore }}>
-      {children}
-    </StoreContext.Provider>
+    <StoreContext.Provider value={{ productsStore, cartStore }}>{children}</StoreContext.Provider>
   );
 };
 

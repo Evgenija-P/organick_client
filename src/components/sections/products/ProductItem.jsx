@@ -30,8 +30,14 @@ const ProductItem = ({ item, page }) => {
           <li className="text-xl text-main font-semibold mb-3">{title}</li>
           <li className="flex justify-between pt-2.5 border-t-[1px] border-borderColor">
             <div className="flex gap-x-2 items-center">
-              <p className="text-[15px] text-lite_grey font-semibold line-through">${old_price}</p>
-              <p className="text-lg text-main font-bold">${current_price}</p>
+              <p className="text-[15px] text-lite_grey font-semibold line-through">
+                {" "}
+                {old_price} {" \u20B4"}
+              </p>
+              <p className="text-lg text-main font-bold">
+                {" "}
+                {current_price} {" \u20B4"}
+              </p>
             </div>
             <Stars active={stars} />
           </li>

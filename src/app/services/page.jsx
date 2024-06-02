@@ -21,7 +21,7 @@ const ITEMS = [
 export default function ServicesPage() {
   return (
     <main className="w-full">
-      <HeroOtherPage title={"Services"} items={ITEMS} className={"services"} />
+      <HeroOtherPage title={"Послуги"} items={ITEMS} className={"services"} />
       <HeroServices />
       <VideoSections />
     </main>

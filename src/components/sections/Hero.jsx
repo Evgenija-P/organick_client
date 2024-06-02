@@ -21,9 +21,9 @@ const Hero = () => {
       <HeroParallax items={ITEMS} />
       <Wrapper styles={"h-full"}>
         <div className="w-[530px] h-fit mt-[245px]">
-          <Title style={"mb-2"}>100% Natural Food</Title>
+          <Title style={"mb-2"}>100% Натуральні продукти</Title>
 
-          <h1 className="text-7xl font-black">Choose the best healthier way of life</h1>
+          <h1 className="text-7xl font-black">Найкращий вибір для Вашого здоров'я</h1>
           <button></button>
         </div>
       </Wrapper>

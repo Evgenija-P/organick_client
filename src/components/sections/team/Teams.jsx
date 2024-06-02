@@ -11,12 +11,11 @@ const Teams = ({ page }) => {
     <section className="w-full pt-[127px] pb-[150px] relative overflow-hidden">
       <Wrapper styles={"h-full"}>
         <div className="w-[852px] flex flex-col mb-11 mx-auto">
-          <Title style={"mb-2 text-center"}>Team</Title>
-          <Subtitle className={"text-center"}>Our Organic Experts</Subtitle>
+          <Title style={"mb-2 text-center"}>Команда</Title>
+          <Subtitle className={"text-center"}>Наші експерти</Subtitle>
           <h3 className="w-full text-lg text-grey text-center mt-4">
-            These people – our team of experts – grow and sell organic vegetables, greens, nuts,
-            fruits, and grains. Their knowledge and experience ensure the highest quality of our
-            products.
+            Ці люди – наша команда експертів – вирощують і продають органічні овочі, зелень, горіхи,
+            фрукти, зерна. Їхні знання та досвід забезпечують найвищу якість нашого продуктів.
           </h3>
         </div>
         <div className="w-full grid grid-cols-3 gap-x-5 gap-y-10">

@@ -16,18 +16,18 @@ const ContactList = () => {
             src={LocationImage}
             width={623}
             height={640}
-            alt=""
+            alt="зображення великого листка дерева"
             className="w-[623px] h-[640px] rounded-[30px] overflow-hidden"
           />
 
           <div className="w-[702px] h-fit">
             <h3 className="text-main text-[50px] font-extrabold leading-none">
-              We'd love to talk about how we can work together.
+              Ми з радістю обговоримо, як ми можемо працювати разом.
             </h3>
             <p className="text-lg text-grey mt-2 mb-8">
-              Simply dummy text of the printing and typesetting industry. Lorem had ceased to been
-              the industry's standard dummy text ever since the 1500s, when an unknown printer took
-              a galley.
+              Зв'яжіться з нами будь0яким зручним спобособом, та наші колеги із радістю допоможуть
+              Вам у Ваших питаннях. Ми залюбки обговоримо умови партнерства, чи купівлі та доставки
+              продуктів.
             </p>
             <Contacts />
             <SocIconList page={"contacts"} />

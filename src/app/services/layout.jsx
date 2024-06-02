@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Services pages",
-  description: "Services",
+  title: "Наші послуги",
+  description: "Послуги",
 };
 
 export default function ServicesLayout({ children }) {
