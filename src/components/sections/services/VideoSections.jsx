@@ -17,9 +17,9 @@ const VideoSections = () => {
       <Wrapper styles={""}>
         <div className="w-[671px] mx-auto">
           <Title style={"text-center"}>Наша робота </Title>
-          <Subtitle className={"text-center"}>Дізнайтися, як ми працюємо</Subtitle>
+          <Subtitle className={"text-center"}>Дізнайтеся, як ми працюємо</Subtitle>
           <p className="text-lg text-grey text-center my-10">
-            Цей маленький відоеролик допоможе зрозуміти, що та як ми робимо на наших фермах, та чому
+            Цей маленький відеоролик допоможе зрозуміти, що та як ми робимо на наших фермах, та чому
             наші продукти дійсно є екологічними та корисними. Натискайте на кнопку та дивіться!
           </p>
         </div>

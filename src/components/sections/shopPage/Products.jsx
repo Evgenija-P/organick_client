@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Wrapper from "../../Wrapper";
 import ProductItem from "../products/ProductItem";
 import Button from "@/components/UI/Buttons";
+import { Up } from "@/icons/iconComponent";
 
 const Products = ({ products }) => {
   const [loadedProducts, setLoadedProducts] = useState(4);
@@ -98,11 +99,21 @@ const Products = ({ products }) => {
         </div>
 
         <div className="flex gap-x-2">
-          <Button clickFn={() => handleSortBy("назві")} style="main">
-            {`Сортувати за назвою ${sortBy === "назві" ? `(${sortDirection})` : ""}`}
+          <Button clickFn={() => handleSortBy("назві")} style="main" btnClass={"flex gap-x-2"}>
+            Сортувати за назвою{" "}
+            {sortBy === "назві" && sortDirection === "зростання" ? (
+              <Up />
+            ) : (
+              <Up className={"rotate-180"} />
+            )}
           </Button>
-          <Button clickFn={() => handleSortBy("ціні")} style="main">
-            {`Сортувати за ціною ${sortBy === "ціні" ? `(${sortDirection})` : ""}`}
+          <Button clickFn={() => handleSortBy("ціні")} style="main" btnClass={"flex gap-x-2"}>
+            Сортувати за ціною{" "}
+            {sortBy === "ціні" && sortDirection === "зростання" ? (
+              <Up />
+            ) : (
+              <Up className={"rotate-180"} />
+            )}
           </Button>
         </div>
 

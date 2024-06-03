@@ -1,10 +1,10 @@
 import { Fb, Insta, Pinterest, TikTok } from "@/icons/iconComponent";
 
 const ITEMS = [
-  { name: "Facebook", link: "#", icon: <Fb /> },
-  { name: "Instagram", link: "#", icon: <Insta /> },
-  { name: "TikTok", link: "#", icon: <TikTok /> },
-  { name: "Pinterest", link: "#", icon: <Pinterest /> },
+  { name: "Facebook", link: "https://www.facebook.com/", icon: <Fb /> },
+  { name: "Instagram", link: "https://www.instagram.com/", icon: <Insta /> },
+  { name: "TikTok", link: "https://www.tiktok.com/", icon: <TikTok /> },
+  { name: "Pinterest", link: "https://ru.pinterest.com/", icon: <Pinterest /> },
 ];
 
 const SocIconList = ({ page }) => {
