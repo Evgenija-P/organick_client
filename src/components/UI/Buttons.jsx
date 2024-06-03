@@ -3,7 +3,8 @@
 import PropTypes from "prop-types";
 
 const buttonsStyle = {
-  transparent: "",
+  transparent:
+    "min-w-[220px] h-[80px] px-3 py-7 text-main text-xl font-bold border-[2px] border-main rounded-2xl hover:shadow-btnMain",
   main: "min-w-[220px] h-[80px] px-3 py-7 text-white text-xl font-bold bg-main rounded-2xl hover:shadow-btnMain",
   yellow: "",
   white: "",
