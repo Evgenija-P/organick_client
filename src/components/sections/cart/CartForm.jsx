@@ -66,7 +66,7 @@ const CartForm = observer(() => {
       </h3>
       <form className="w-full grid grid-cols-2 gap-x-[20px] gap-y-[20px] mx-auto mt-5">
         {TEXT_FIELDS.map(({ id, name, placeholder, type, style, label }) => (
-          <div key={id} className={`field-wrapper ${style || ""}`}>
+          <div key={id+25} className={`field-wrapper ${style || ""}`}>
             <Controller
               control={control}
               name={name}

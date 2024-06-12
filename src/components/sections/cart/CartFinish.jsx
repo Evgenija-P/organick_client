@@ -9,7 +9,13 @@ const CartFinish = observer(() => {
       <h3 className="text-[50px] font-bold mb-[50px] text-center">Ваше замовлення оформлено! </h3>
       <p className="text-[30px] font-bold mb-[50px] text-center">Номер замовлення: {orderNumber}</p>
       <p className="text-[30px] font-bold text-center">
-        Детальна інформація по замовленню <Link href={`/orders/${orderId}`}> тут.</Link>
+        Детальна інформація по замовленню{" "}
+        <Link
+          href={`/orders/${orderId}`}
+          className="text-orange underline underline-offset-1 hover:underline-offset-4"
+        >
+          тут.
+        </Link>
       </p>
     </div>
   );

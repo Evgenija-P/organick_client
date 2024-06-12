@@ -6,7 +6,7 @@ const Banner = ({ item }) => {
     <div className="w-[640px] h-[367px] rounded-[30px] overflow-hidden relative">
       <Image
         src={item.url}
-        className="object-cover object-right-top h-full"
+        className="object-cover object-top h-full"
         alt={`banner about our services ${item.title}`}
       />
       <div className="w-[263px] flex flex-col absolute top-[109px] left-[55px]">

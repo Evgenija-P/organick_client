@@ -1,6 +1,6 @@
 import Wrapper from "../Wrapper";
 import banner_1 from "@/images/home/banner_1.png";
-import banner_2 from "@/images/home/banner_2.png";
+import banner_2 from "@/images/home/banner_22.png";
 import Banner from "../Banner";
 
 const ITEMS = [
@@ -15,7 +15,7 @@ const ITEMS = [
   {
     id: "2",
     title: "Пропозиція!!",
-    subtitle: "Отримайте 10% знижки на овочі",
+    subtitle: "Даруємо 10% знижки на овочі",
     type: "black",
     style: "",
     url: banner_2,

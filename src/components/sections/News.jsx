@@ -48,9 +48,9 @@ const News = async ({ page }) => {
           </div>
         )}
 
-        <div className="w-full grid grid-cols-2 mx-auto mt-12 gap-x-[46px] gap-y-16 mb-[185px]">
+        <div className="w-full grid grid-cols-2 mx-auto mt-12 gap-x-[46px] gap-y-16 mb-14">
           {limitedNews.map(el => (
-            <NewsItem key={el.id} item={el} />
+            <NewsItem key={el.id+70} item={el} />
           ))}
         </div>
       </Wrapper>

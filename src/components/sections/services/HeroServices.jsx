@@ -21,7 +21,7 @@ const HeroServices = () => {
         <div className="w-[1400px] h-[900px] flex items-center justify-between services-section">
           <ul className="w-[396px] flex flex-col gap-y-[39px]">
             {firstThree.map(el => (
-              <li key={el.id} className="text-right flex flex-col items-end">
+              <li key={el.id + el.title} className="text-right flex flex-col items-end">
                 <Image src={el.img} width={42} height={42} />
                 <p className="text-[25px] font-medium"> {el.title}</p>
                 <p className="leading-[1.6]">{el.text}</p>
@@ -30,7 +30,7 @@ const HeroServices = () => {
           </ul>
           <ul className="w-[396px] flex flex-col gap-y-[39px]">
             {nextThree.map(el => (
-              <li key={el.id} className="flex flex-col">
+              <li key={el.id + el.title} className="flex flex-col">
                 <Image src={el.img} width={42} height={42} />
                 <p className="text-[25px] font-medium"> {el.title}</p>
                 <p className="leading-[1.6]">{el.text}</p>

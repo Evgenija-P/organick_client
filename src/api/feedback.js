@@ -10,7 +10,7 @@ export const createFeedback = async feedbackData => {
       body: JSON.stringify(feedbackData),
     });
     const data = await response.json();
-    console.log("createFeedback", data);
+
     return data;
   } catch (error) {
     console.error("Error:", error);
@@ -26,7 +26,7 @@ export const getAllFeedbacks = async () => {
       },
     });
     const data = await response.json();
-    console.log(data);
+
     return data;
   } catch (error) {
     console.error("Error:", error);

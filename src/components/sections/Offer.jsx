@@ -29,7 +29,7 @@ const Offer = ({ products }) => {
 
         <div className="w-full mx-auto grid grid-cols-4 mt-[50px]">
           {randomProducts.map(el => (
-            <ProductItem key={el.id} item={el} page="offer" />
+            <ProductItem key={el.id+100} item={el} page="offer" />
           ))}
         </div>
       </Wrapper>

@@ -80,7 +80,7 @@ const ContactForm = () => {
         <TextField
           control={control}
           name={name}
-          key={id}
+          key={id + name}
           defaultValue={defaultValue}
           placeholder={placeholder}
           label={label}

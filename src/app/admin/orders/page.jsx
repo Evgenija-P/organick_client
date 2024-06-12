@@ -9,7 +9,6 @@ export const getAllOrders = async slug => {
     headers: {
       "Content-Type": "application/json",
     },
-    cache: "force-cache",
   });
 
   if (!res.ok) {
@@ -27,8 +26,6 @@ export default async function OrdersPage() {
 
   // Очікуємо виконання всіх промісів і отримуємо результати
   const orderDetails = await Promise.all(orderPromises);
-
-  console.log(orderDetails);
 
   return (
     <main className="w-full pb-[100px]">
