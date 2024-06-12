@@ -8,7 +8,7 @@ export const metadata = {
   title: "Organic",
   description: "Organic",
   icons: {
-    icon: "/public/favicon.ico",
+    icon: "/favicon.ico",
   },
 };
 
