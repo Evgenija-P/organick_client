@@ -8,8 +8,6 @@ export async function getAllOrders() {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
-      // Заголовки для управління кешуванням
-      "Cache-Control": "max-age=60, stale-while-revalidate=30",
     },
   });
 
@@ -17,11 +15,13 @@ export async function getAllOrders() {
     throw new Error("Failed to fetch data");
   }
   const data = await res.json();
+
   return data;
 }
 
 export default async function OrdersPage() {
   const orders = await getAllOrders();
+  console.log(orders);
 
   // Створюємо масив з промісами для отримання інформації про кожне замовлення
   const orderPromises = orders.map(order => getOrderById(order._id));
