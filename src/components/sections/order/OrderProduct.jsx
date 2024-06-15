@@ -6,7 +6,7 @@ const OrderProduct = ({ item }) => {
   return (
     <li className="w-full h-[90px] py-4 px-2 grid grid-cols-cartItem items-center justify-between border-b border-green">
       <div>
-        <Link href={`/shop/${item.slug}`} className="flex items-center gap-x-5">
+        <Link href={`/products/${item.slug}`} className="flex items-center gap-x-5">
           <Image src={item.img} width={70} height={70} alt={item.title} />
           <p className="text-[25px] font-medium">{item.title}</p>
         </Link>
