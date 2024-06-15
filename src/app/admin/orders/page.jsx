@@ -8,19 +8,17 @@ export async function getAllOrders() {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
-      // Заголовки для уникнення кешування
-      "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate",
-      Pragma: "no-cache",
-      Expires: "0",
-      "Surrogate-Control": "no-store",
+      // Заголовки для управління кешуванням
+      "Cache-Control": "max-age=60, stale-while-revalidate=30",
     },
   });
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
-
-  return res.json();
+  const data = await res.json();
+  console.log(data);
+  return data;
 }
 
 export default async function OrdersPage() {
