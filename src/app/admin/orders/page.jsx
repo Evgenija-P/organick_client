@@ -3,11 +3,16 @@ import { getOrderById } from "@/api/ordersAPI";
 import Wrapper from "@/components/Wrapper";
 import AdminOrderItem from "@/components/sections/order/AdminOrderItem";
 
-export const getAllOrders = async slug => {
+export async function getAllOrders() {
   const res = await fetch(`${baseURL}/order`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
+      // Заголовки для уникнення кешування
+      "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate",
+      Pragma: "no-cache",
+      Expires: "0",
+      "Surrogate-Control": "no-store",
     },
   });
 
@@ -16,7 +21,7 @@ export const getAllOrders = async slug => {
   }
 
   return res.json();
-};
+}
 
 export default async function OrdersPage() {
   const orders = await getAllOrders();

@@ -26,7 +26,7 @@ const Quantity = observer(({ item, page }) => {
 
   return (
     <div className="w-full flex items-center gap-x-3 ">
-      {page !== "cart" && <p>Quantity:</p>}
+      {page !== "cart" && <p>Кількість:</p>}
       <div
         className={`${
           page === "cart"
@@ -59,7 +59,7 @@ const Quantity = observer(({ item, page }) => {
           +
         </button>
       </div>
-      {page !== "cart" && <LinkButton goTo="/cart" title="Go to Cart" style="main" />}
+      {page !== "cart" && <LinkButton goTo="/cart" title="У кошик" style="main" />}
     </div>
   );
 });
