@@ -3,6 +3,7 @@ import { roboto } from "./fonts";
 import "./globals.css";
 import { Header } from "@/components/Header.jsx";
 import { StoreProvider } from "@/store/StoreProvider";
+import Script from "next/script";
 
 export const metadata = {
   title: "Organic",
@@ -19,7 +20,11 @@ export default function RootLayout({ children }) {
         <StoreProvider>
           <Header /> {children}
           <Footer />
-        </StoreProvider>
+        </StoreProvider>{" "}
+        <Script
+          src="https://stat-production.up.railway.app?token=6401b989c01d2ba6eaa22594&appName=organic"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
